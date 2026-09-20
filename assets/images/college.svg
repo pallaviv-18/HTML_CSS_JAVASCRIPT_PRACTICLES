@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="title desc">
+    <title id="title">College campus illustration</title>
+    <desc id="desc">A simple illustration of a college building under a blue sky.</desc>
+    <rect width="800" height="450" fill="#dbeafe"/>
+    <rect y="310" width="800" height="140" fill="#86efac"/>
+    <rect x="150" y="150" width="500" height="180" fill="#f8fafc" stroke="#1e3a8a" stroke-width="8"/>
+    <path d="M110 155 L400 45 L690 155 Z" fill="#1e3a8a"/>
+    <rect x="365" y="220" width="70" height="110" fill="#f59e0b"/>
+    <g fill="#60a5fa">
+        <rect x="190" y="200" width="65" height="55"/>
+        <rect x="285" y="200" width="65" height="55"/>
+        <rect x="450" y="200" width="65" height="55"/>
+        <rect x="545" y="200" width="65" height="55"/>
+    </g>
+</svg>
