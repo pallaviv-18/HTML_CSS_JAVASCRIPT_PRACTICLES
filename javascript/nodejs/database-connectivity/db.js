@@ -52,7 +52,8 @@ function addStudent({ name, course, email }) {
         $email: email
     });
     save();
-    return getStudent(database.exec('SELECT last_insert_rowid() AS id')[0].values[0][0]);
+    const id = database.exec('SELECT id FROM students ORDER BY id DESC LIMIT 1')[0].values[0][0];
+    return getStudent(id);
 }
 
 function updateStudent(id, { name, course, email }) {
