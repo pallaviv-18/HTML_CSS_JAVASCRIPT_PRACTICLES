@@ -4,6 +4,11 @@ This project demonstrates a basic client-server application using only Node.js b
 
 ## Run it
 
+The separate backend experiments are in [`experiments/`](experiments/README.md).
+They cover client-server architecture, HTTP servers, request-response handling,
+Node.js fundamentals, built-in modules, `fs`, `path`, custom modules, npm,
+asynchronous patterns, and error handling.
+
 Open a terminal in this folder and install the package:
 
 ```bash
