@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e3a8a;
+            --background-color: #f4f6f8;
+            --card-color: white;
+            --spacing: 20px;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: var(--background-color);
+        }
+
+        header {
+            background: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: var(--spacing);
+        }
+
+        .card {
+            background: var(--card-color);
+            padding: var(--spacing);
+            margin-bottom: var(--spacing);
+            border-left: 5px solid var(--primary-color);
+            border-radius: 8px;
+            box-shadow: 0 3px 10px #ccc;
+        }
+
+        button {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>CSS Variables</h1>
+    <p>Using custom properties in CSS</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>What are CSS Variables?</h2>
+        <p>
+            CSS variables allow us to store reusable values such as
+            colors, spacing and sizes.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Reusable Values</h2>
+        <p>
+            The same variables are used throughout this webpage.
+        </p>
+        <button>Example Button</button>
+    </div>
+
+</div>
+
+</body>
+</html>

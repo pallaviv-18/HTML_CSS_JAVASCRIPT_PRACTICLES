@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head><title>JS 41 - Async JavaScript</title></head>
+<body style="font-family:Arial;text-align:center;padding:40px">
+
+<h1>Callbacks, Promises & Async/Await</h1>
+<button onclick="run()">Run</button>
+<p id="result"></p>
+
+<script>
+function callbackExample(callback){
+    setTimeout(()=>callback("Callback completed!"),500);
+}
+
+function promiseExample(){
+    return new Promise(resolve=>{
+        setTimeout(()=>resolve("Promise completed!"),1000);
+    });
+}
+
+async function run(){
+    callbackExample(message=>{
+        document.getElementById("result").innerHTML=message;
+    });
+
+    let message=await promiseExample();
+
+    document.getElementById("result").innerHTML+=
+        "<br>"+message+"<br>Async/Await completed!";
+}
+</script>
+
+<br>
+<a href="../index.html">Home</a> | <a href="index.html">JavaScript Programs</a>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CSS 52 - Responsive Footer</title>
+<style>
+body{margin:0;font-family:Arial;background:#f4f6f8}
+main{min-height:500px;padding:40px;text-align:center}
+footer{background:#222;color:white;padding:30px}
+.footer-content{display:flex;justify-content:space-around;gap:30px}
+.footer-section{flex:1}
+.footer-section a{display:block;color:white;text-decoration:none;margin:8px}
+.navigation{margin-top:30px;display:flex;justify-content:space-between}
+.navigation a{background:#555;color:white;padding:10px 15px;text-decoration:none;border-radius:5px}
+@media(max-width:600px){.footer-content{flex-direction:column;text-align:center}}
+</style>
+</head>
+<body>
+<main>
+<h1>Responsive Footer</h1>
+<p>Resize the browser to see the footer become responsive.</p>
+</main>
+<footer>
+<div class="footer-content">
+<div class="footer-section"><h2>About</h2><p>My website</p></div>
+<div class="footer-section"><h2>Links</h2><a href="#">Home</a><a href="#">About</a></div>
+<div class="footer-section"><h2>Contact</h2><p>student@example.com</p></div>
+</div>
+<div class="navigation">
+<a href="css-51-fixed-sidebar.html">← Previous</a>
+<a href="index.html">CSS Programs</a>
+<a href="css-53-responsive-login-signup.html">Next →</a>
+</div>
+</footer>
+</body>
+</html>

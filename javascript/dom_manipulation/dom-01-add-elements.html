@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Elements Dynamically</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 30px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        li {
+            margin: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="../../index.html">Home</a> |
+    <a href="../index.html">JavaScript Programs</a>
+
+    <h1>Add Elements Dynamically</h1>
+
+    <button onclick="addItem()">Add Item</button>
+
+    <ul id="itemList">
+        <li>Existing Item</li>
+    </ul>
+
+    <script>
+        function addItem() {
+            const list = document.getElementById("itemList");
+
+            const newItem = document.createElement("li");
+            newItem.textContent = "New Item Added";
+
+            list.appendChild(newItem);
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JavaScript practical programs, browser projects, Node.js and Express lessons.">
+    <title>JavaScript Practical Lab</title>
+    <style>
+        :root {
+            --ink: #17232b;
+            --muted: #5e6d73;
+            --paper: #fffdf7;
+            --line: #d7e0d9;
+            --yellow: #f2c94c;
+            --orange: #e76f51;
+            --green: #2a9d8f;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            color: var(--ink);
+            background: #e8f0eb;
+            font-family: Georgia, 'Times New Roman', serif;
+        }
+
+        header {
+            padding: 64px max(24px, calc((100% - 1120px) / 2));
+            background: var(--ink);
+            color: var(--paper);
+            border-bottom: 8px solid var(--yellow);
+        }
+
+        .eyebrow {
+            margin: 0 0 14px;
+            color: var(--yellow);
+            font: 700 .78rem/1.2 Arial, sans-serif;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            max-width: 760px;
+            margin: 0;
+            font-size: clamp(2.8rem, 8vw, 6.8rem);
+            line-height: .9;
+        }
+
+        header p:last-child {
+            max-width: 650px;
+            margin: 24px 0 0;
+            color: #d5e3dc;
+            font: 1.05rem/1.6 Arial, sans-serif;
+        }
+
+        main {
+            width: min(100% - 32px, 1120px);
+            margin: 34px auto 70px;
+        }
+
+        .toolbar {
+            display: flex;
+            gap: 14px;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+        }
+
+        .toolbar input {
+            flex: 1 1 280px;
+            min-height: 46px;
+            padding: 0 14px;
+            border: 2px solid var(--line);
+            border-radius: 4px;
+            color: var(--ink);
+            font: 1rem Arial, sans-serif;
+        }
+
+        .count {
+            color: var(--muted);
+            font: .9rem Arial, sans-serif;
+        }
+
+        section {
+            margin: 38px 0;
+        }
+
+        .section-title {
+            display: flex;
+            gap: 14px;
+            align-items: baseline;
+            border-bottom: 2px solid var(--ink);
+        }
+
+        h2 {
+            margin: 0 0 10px;
+            font-size: 2rem;
+        }
+
+        .section-title p {
+            margin: 0 0 10px;
+            color: var(--muted);
+            font: .9rem Arial, sans-serif;
+        }
+
+        .links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 10px;
+            padding-top: 16px;
+        }
+
+        .links a {
+            display: block;
+            padding: 14px 15px;
+            border: 1px solid var(--line);
+            border-left: 5px solid var(--green);
+            background: var(--paper);
+            color: var(--ink);
+            text-decoration: none;
+            font: 700 .92rem/1.3 Arial, sans-serif;
+            transition: transform .18s ease, border-color .18s ease;
+        }
+
+        .links a:hover,
+        .links a:focus {
+            border-color: var(--orange);
+            transform: translateY(-3px);
+        }
+
+        .links a small {
+            display: block;
+            margin-top: 5px;
+            color: var(--muted);
+            font-weight: 400;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+        }
+
+        .feature {
+            padding: 22px;
+            background: var(--ink);
+            color: var(--paper);
+            border-top: 5px solid var(--orange);
+        }
+
+        .feature h3 {
+            margin: 0 0 10px;
+            font-size: 1.35rem;
+        }
+
+        .feature p {
+            min-height: 60px;
+            margin: 0 0 16px;
+            color: #d5e3dc;
+            font: .9rem/1.5 Arial, sans-serif;
+        }
+
+        .feature a {
+            color: var(--yellow);
+            font: 700 .9rem Arial, sans-serif;
+        }
+
+        footer {
+            padding: 24px;
+            background: var(--ink);
+            color: #d5e3dc;
+            text-align: center;
+            font: .85rem Arial, sans-serif;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                padding: 48px 24px;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <p class="eyebrow">Practical JavaScript Lab</p>
+        <h1>Build it. Break it. Understand it.</h1>
+        <p>A single index for browser fundamentals, DOM experiments, mini projects, Node.js server architecture, and the
+            Express REST application.</p>
+    </header>
+
+    <main>
+        <div class="toolbar">
+            <input id="search" type="search" placeholder="Search lessons, for example: array or form"
+                aria-label="Search JavaScript lessons">
+            <span id="count" class="count"></span>
+        </div>
+
+        <section>
+            <div class="section-title">
+                <h2>Start here</h2>
+                <p>Server-side projects and grouped browser work</p>
+            </div>
+            <div class="feature-grid">
+                <article class="feature">
+                    <h3>Node.js</h3>
+                    <p>HTTP server, built-in modules, file system, callbacks, promises, and async/await.</p><a
+                        href="nodejs/server-side-architecture/README.md">Open Node.js guide</a>
+                </article>
+                <article class="feature">
+                    <h3>Express.js</h3>
+                    <p>Routing, middleware, sessions, JWT, roles, SQLite CRUD, REST APIs, and Postman.</p><a
+                        href="express/student-management/README.md">Open Express guide</a>
+                </article>
+                <article class="feature">
+                    <h3>Browser projects</h3>
+                    <p>Interactive pages covering storage, events, forms, and DOM manipulation.</p><a
+                        href="#projects">Browse project folders</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="lessons">
+            <div class="section-title">
+                <h2>Core JavaScript</h2>
+                <p>Numbers, strings, arrays, objects, and language features</p>
+            </div>
+            <div class="links">
+                <a href="js-01-hello-world.html">01 Hello World</a>
+                <a href="js-02-arithmetic.html">02 Arithmetic</a>
+                <a href="js-03-largest-three.html">03 Largest of Three</a>
+                <a href="js-04-even-odd.html">04 Even or Odd</a>
+                <a href="js-05-positive-negative-zero.html">05 Positive, Negative, Zero</a>
+                <a href="js-06-factorial.html">06 Factorial</a>
+                <a href="js-07-fibonacci.html">07 Fibonacci</a>
+                <a href="js-08-prime.html">08 Prime Number</a>
+                <a href="js-09-palindrome-number.html">09 Palindrome Number</a>
+                <a href="js-10-reverse-number.html">10 Reverse Number</a>
+                <a href="js-11-sum-digits.html">11 Sum of Digits</a>
+                <a href="js-12-largest-smallest-array.html">12 Largest and Smallest Array</a>
+                <a href="js-13-sort-array.html">13 Sort Array</a>
+                <a href="js-14-array-sum-average.html">14 Array Sum and Average</a>
+                <a href="js-15-functions.html">15 Functions</a>
+                <a href="js-16-arrow-functions.html">16 Arrow Functions</a>
+                <a href="js-17-strings.html">17 Strings</a>
+                <a href="js-18-arrays.html">18 Arrays</a>
+                <a href="js-19-objects.html">19 Objects</a>
+                <a href="js-20-date-math.html">20 Date and Math</a>
+                <a href="js-37-es6.html">37 ES6</a>
+                <a href="js-38-spread-rest.html">38 Spread and Rest</a>
+                <a href="js-39-classes-objects.html">39 Classes and Objects</a>
+                <a href="js-40-inheritance.html">40 Inheritance</a>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-title">
+                <h2>Browser and DOM</h2>
+                <p>Events, forms, browser APIs, and interactive pages</p>
+            </div>
+            <div class="links">
+                <a href="js-21-dom-events.html">21 DOM Events</a>
+                <a href="js-22-change-text.html">22 Change Text</a>
+                <a href="js-23-change-background.html">23 Change Background</a>
+                <a href="js-24-click-event.html">24 Click Event</a>
+                <a href="js-25-show-hide.html">25 Show and Hide</a>
+                <a href="js-26-image-change.html">26 Image Change</a>
+                <a href="js-27-digital-clock.html">27 Digital Clock</a>
+                <a href="js-28-calculator.html">28 Calculator</a>
+                <a href="js-29-guessing-game.html">29 Guessing Game</a>
+                <a href="js-30-form-validation.html">30 Form Validation</a>
+                <a href="js-31-validate-fields.html">31 Validate Fields</a>
+                <a href="js-32-todo.html">32 Todo List</a>
+                <a href="js-33-quiz.html">33 Quiz</a>
+                <a href="js-34-counter.html">34 Counter</a>
+                <a href="js-35-stopwatch.html">35 Stopwatch</a>
+                <a href="js-36-countdown.html">36 Countdown</a>
+                <a href="js-41-callback-promise-async.html">41 Callback, Promise, Async</a>
+                <a href="js-42-fetch-api.html">42 Fetch API</a>
+                <a href="js-43-api-dynamic.html">43 Dynamic API</a>
+                <a href="js-44-localstorage.html">44 Local Storage</a>
+                <a href="js-45-responsive-login.html">45 Responsive Login</a>
+                <a href="js-46-interactive-webpage.html">46 Interactive Webpage</a>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-title">
+                <h2>Problem Solving</h2>
+                <p>Small programs for practice and repetition</p>
+            </div>
+            <div class="links">
+                <a href="js-47-swap-numbers.html">47 Swap Numbers</a>
+                <a href="js-48-gcd.html">48 GCD</a>
+                <a href="js-49-lcm.html">49 LCM</a>
+                <a href="js-50-armstrong.html">50 Armstrong Number</a>
+                <a href="js-51-perfect-number.html">51 Perfect Number</a>
+                <a href="js-52-multiplication-table.html">52 Multiplication Table</a>
+                <a href="js-53-power.html">53 Power</a>
+                <a href="js-54-count-digits.html">54 Count Digits</a>
+                <a href="js-55-second-largest-array.html">55 Second Largest Array</a>
+                <a href="js-56-remove-duplicates.html">56 Remove Duplicates</a>
+                <a href="js-57-merge-arrays.html">57 Merge Arrays</a>
+                <a href="js-58-frequency-elements.html">58 Frequency of Elements</a>
+                <a href="js-59-common-elements.html">59 Common Elements</a>
+                <a href="js-60-reverse-string.html">60 Reverse String</a>
+                <a href="js-61-string-palindrome.html">61 String Palindrome</a>
+                <a href="js-62-vowels-consonants.html">62 Vowels and Consonants</a>
+                <a href="js-63-word-count.html">63 Word Count</a>
+                <a href="js-64-character-frequency.html">64 Character Frequency</a>
+                <a href="js-65-regex.html">65 Regular Expressions</a>
+                <a href="js-66-email-regex.html">66 Email Regex</a>
+                <a href="js-67-email-regex-demo.html">67 Email Regex Demo</a>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="section-title">
+                <h2>Project folders</h2>
+                <p>Longer examples with their own pages</p>
+            </div>
+            <div class="links">
+                <a href="browser-storage/">Browser Storage<small>local and session storage experiments</small></a>
+                <a href="dom_manipulation/">DOM Manipulation<small>document and element exercises</small></a>
+                <a href="events/">Events<small>event-driven browser examples</small></a>
+                <a href="forms-validation/">Forms and Validation<small>form input and validation work</small></a>
+                <a href="mni-projects/">Mini Projects<small>interactive portfolio and other projects</small></a>
+                <a href="nodejs/server-side-architecture/README.md">Node.js Server Architecture<small>run with npm
+                        start</small></a>
+                <a href="express/student-management/README.md">Express Student Management<small>run with npm start, then
+                        open localhost:3001</small></a>
+                <a href="express/student-management/public/index.html">Express HTML Client<small>served automatically by
+                        the Express app</small></a>
+            </div>
+        </section>
+    </main>
+
+    <footer>JavaScript Practical Lab · Open any lesson to run it in your browser.</footer>
+    <script>
+        const search = document.querySelector('#search');
+        const links = [...document.querySelectorAll('.links a')];
+        const count = document.querySelector('#count');
+        function updateResults() {
+            const query = search.value.trim().toLowerCase();
+            let visible = 0;
+            links.forEach((link) => {
+                const matches = link.textContent.toLowerCase().includes(query);
+                link.hidden = !matches;
+                if (matches) visible += 1;
+            });
+            count.textContent = `${visible} lessons or projects`;
+        }
+        search.addEventListener('input', updateResults);
+        updateResults();
+    </script>
+</body>
+
+</html>

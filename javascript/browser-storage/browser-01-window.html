@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Object</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 30px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 8px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="../../index.html">Home</a> |
+    <a href="../index.html">JavaScript Programs</a>
+
+    <h1>Window Object</h1>
+
+    <button onclick="showWindowInfo()">Show Window Information</button>
+    <button onclick="openWindow()">Open New Window</button>
+
+    <div id="result"></div>
+
+    <script>
+        function showWindowInfo() {
+            const result = document.getElementById("result");
+
+            result.innerHTML =
+                "Window Width: " + window.innerWidth + " px<br>" +
+                "Window Height: " + window.innerHeight + " px<br>" +
+                "Screen Width: " + screen.width + " px<br>" +
+                "Screen Height: " + screen.height + " px";
+        }
+
+        function openWindow() {
+            window.open(
+                "https://www.google.com",
+                "_blank",
+                "width=600,height=400"
+            );
+        }
+    </script>
+
+</body>
+</html>

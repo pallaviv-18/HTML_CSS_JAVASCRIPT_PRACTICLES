@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CSS 59 - News Blog Grid</title>
+<style>
+body{font-family:Arial;background:#f4f4f4;margin:0}
+header{background:#222;color:white;padding:25px;text-align:center}
+.blog{max-width:1000px;margin:30px auto;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.article{background:white;padding:20px;border-radius:10px}
+.article h2{color:#333}
+.navigation{max-width:1000px;margin:30px auto;display:flex;justify-content:space-between}
+a{background:#333;color:white;padding:10px 15px;text-decoration:none;border-radius:5px}
+@media(max-width:700px){.blog{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><h1>Daily News & Blog</h1></header>
+<div class="blog">
+<div class="article"><h2>Technology</h2><p>Latest developments in technology.</p></div>
+<div class="article"><h2>Education</h2><p>New ideas and opportunities for students.</p></div>
+<div class="article"><h2>Travel</h2><p>Discover interesting destinations.</p></div>
+<div class="article"><h2>Sports</h2><p>Latest sports updates.</p></div>
+<div class="article"><h2>Science</h2><p>Interesting scientific discoveries.</p></div>
+<div class="article"><h2>Lifestyle</h2><p>Tips for a better lifestyle.</p></div>
+</div>
+<div class="navigation">
+<a href="css-58-travel.html">← Previous</a>
+<a href="index.html">CSS Programs</a>
+<a href="css-60-multi-section-portfolio.html">Next →</a>
+</div>
+</body>
+</html>

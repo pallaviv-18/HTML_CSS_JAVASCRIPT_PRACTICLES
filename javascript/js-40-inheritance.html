@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head><title>JS 40 - Inheritance</title></head>
+<body style="font-family:Arial;text-align:center;padding:40px">
+
+<h1>JavaScript Inheritance</h1>
+<button onclick="run()">Run</button>
+<p id="result"></p>
+
+<script>
+class Person{
+    constructor(name){
+        this.name=name;
+    }
+
+    showName(){
+        return "Name: "+this.name;
+    }
+}
+
+class Student extends Person{
+    constructor(name,course){
+        super(name);
+        this.course=course;
+    }
+
+    showStudent(){
+        return this.showName()+"<br>Course: "+this.course;
+    }
+}
+
+function run(){
+    let s=new Student("Pallavi","B.Tech");
+    document.getElementById("result").innerHTML=s.showStudent();
+}
+</script>
+
+<br>
+<a href="../index.html">Home</a> | <a href="index.html">JavaScript Programs</a>
+</body>
+</html>

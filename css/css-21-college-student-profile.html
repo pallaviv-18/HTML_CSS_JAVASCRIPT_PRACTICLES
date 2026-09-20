@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Student Profile</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #4b6cb7, #182848);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        header h1 {
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        .profile-container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .profile-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 25px;
+            margin-bottom: 25px;
+        }
+
+        .profile-image {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            background: #4b6cb7;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 45px;
+            font-weight: bold;
+        }
+
+        .profile-info h2 {
+            margin-bottom: 10px;
+            color: #182848;
+        }
+
+        .profile-info p {
+            margin: 6px 0;
+        }
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .section h3 {
+            color: #4b6cb7;
+            margin-bottom: 12px;
+            border-left: 5px solid #4b6cb7;
+            padding-left: 10px;
+        }
+
+        .details {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .detail-box {
+            background: #f1f4f8;
+            padding: 12px;
+            border-radius: 8px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            background: #4b6cb7;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+        }
+
+        .education {
+            background: #f1f4f8;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .navigation {
+            text-align: center;
+            margin: 25px 0;
+        }
+
+        .navigation a {
+            display: inline-block;
+            text-decoration: none;
+            background: #182848;
+            color: white;
+            padding: 10px 18px;
+            margin: 5px;
+            border-radius: 6px;
+        }
+
+        .navigation a:hover {
+            background: #4b6cb7;
+        }
+
+        footer {
+            text-align: center;
+            background: #182848;
+            color: white;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 600px) {
+            .profile-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .details {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>College Student Profile</h1>
+        <p>Student Information and Academic Profile</p>
+    </header>
+
+    <div class="profile-container">
+
+        <div class="profile-card">
+
+            <div class="profile-header">
+                <div class="profile-image">P</div>
+
+                <div class="profile-info">
+                    <h2>Pallavi Varigonda</h2>
+                    <p><strong>Course:</strong> B.Tech</p>
+                    <p><strong>Year:</strong> 2nd Year</p>
+                    <p><strong>Department:</strong> Computer Science</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Student Details</h3>
+
+                <div class="details">
+                    <div class="detail-box">
+                        <strong>Register Number:</strong> 24BTECH001
+                    </div>
+
+                    <div class="detail-box">
+                        <strong>Section:</strong> A
+                    </div>
+
+                    <div class="detail-box">
+                        <strong>College:</strong> Sai University
+                    </div>
+
+                    <div class="detail-box">
+                        <strong>Location:</strong> Chennai
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Education</h3>
+
+                <div class="education">
+                    <p><strong>B.Tech - Computer Science</strong></p>
+                    <p>2025 - Present</p>
+                    <p>Currently pursuing undergraduate studies.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Technical Skills</h3>
+
+                <div class="skills">
+                    <span class="skill">HTML</span>
+                    <span class="skill">CSS</span>
+                    <span class="skill">JavaScript</span>
+                    <span class="skill">Python</span>
+                    <span class="skill">C</span>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>About Student</h3>
+                <p>
+                    A motivated B.Tech student interested in web development,
+                    programming and learning new technologies.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="navigation">
+            <a href="../index.html">Home</a>
+            <a href="index.html">Back to CSS Programs</a>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>College Student Profile | CSS Experiment 21</p>
+    </footer>
+
+</body>
+</html>

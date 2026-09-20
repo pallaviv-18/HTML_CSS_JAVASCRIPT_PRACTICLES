@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head><title>JS 34 - Counter</title></head>
+<body style="font-family:Arial;text-align:center;padding:50px">
+
+<h1>Counter</h1>
+<h2 id="count">0</h2>
+
+<button onclick="change(-1)">−</button>
+<button onclick="change(1)">+</button>
+<button onclick="reset()">Reset</button>
+
+<script>
+let count=0;
+
+function change(value){
+    count+=value;
+    document.getElementById("count").textContent=count;
+}
+
+function reset(){
+    count=0;
+    document.getElementById("count").textContent=count;
+}
+</script>
+
+<br><br>
+<a href="../index.html">Home</a> | <a href="index.html">JavaScript Programs</a>
+</body>
+</html>

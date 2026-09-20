@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CSS 71 - Dark Mode</title>
+<style>
+:root{
+--bg:#f4f6f8;
+--text:#222;
+--card:white;
+}
+body{margin:0;font-family:Arial;background:var(--bg);color:var(--text);padding:30px}
+.container{max-width:800px;margin:auto}
+.card{background:var(--card);padding:30px;border-radius:12px}
+.dark{
+--bg:#181818;
+--text:#f5f5f5;
+--card:#292929;
+}
+label{display:inline-block;margin-bottom:20px;background:#222;color:white;padding:10px;border-radius:5px;cursor:pointer}
+#theme{display:none}
+#theme:checked~.container{--bg:#181818;--text:#f5f5f5;--card:#292929}
+.navigation{margin-top:30px;display:flex;justify-content:space-between}
+.navigation a{background:#333;color:white;padding:10px 15px;text-decoration:none;border-radius:5px}
+</style>
+</head>
+<body>
+<input type="checkbox" id="theme">
+<label for="theme">Toggle Dark Mode</label>
+
+<div class="container">
+<div class="card">
+<h1>Dark Mode</h1>
+<p>CSS variables can be used to create a dark theme.</p>
+</div>
+<div class="navigation">
+<a href="css-70-modal.html">← Previous</a>
+<a href="index.html">CSS Programs</a>
+<a href="css-72-responsive-typography.html">Next →</a>
+</div>
+</div>
+</body>
+</html>

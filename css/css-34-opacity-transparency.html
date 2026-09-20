@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opacity and Transparency</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #e2e8f0;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        .box {
+            height: 120px;
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+
+        .full {
+            background: #2563eb;
+            opacity: 1;
+        }
+
+        .high {
+            background: #2563eb;
+            opacity: 0.75;
+        }
+
+        .medium {
+            background: #2563eb;
+            opacity: 0.5;
+        }
+
+        .low {
+            background: #2563eb;
+            opacity: 0.25;
+        }
+
+        .transparent {
+            background: rgba(220, 38, 38, 0.4);
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Opacity and Transparency</h1>
+
+<div class="container">
+
+    <div class="box full">
+        Opacity: 1
+    </div>
+
+    <div class="box high">
+        Opacity: 0.75
+    </div>
+
+    <div class="box medium">
+        Opacity: 0.5
+    </div>
+
+    <div class="box low">
+        Opacity: 0.25
+    </div>
+
+    <div class="box transparent">
+        Transparent Background
+    </div>
+
+</div>
+
+</body>
+</html>

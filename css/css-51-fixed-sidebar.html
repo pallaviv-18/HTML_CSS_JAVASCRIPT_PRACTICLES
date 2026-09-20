@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CSS 51 - Fixed Sidebar</title>
+<style>
+body{margin:0;font-family:Arial;background:#f4f6f8}
+.sidebar{position:fixed;left:0;top:0;width:220px;height:100vh;background:#222;padding-top:30px}
+.sidebar a{display:block;color:white;text-decoration:none;padding:15px 20px}
+.sidebar a:hover{background:#444}
+.content{margin-left:220px;padding:40px}
+.card{background:white;padding:30px;margin-bottom:20px;border-radius:10px}
+.navigation{display:flex;justify-content:space-between}
+.navigation a{background:#333;color:white;padding:10px 15px;text-decoration:none;border-radius:5px}
+@media(max-width:600px){.sidebar{width:150px}.content{margin-left:150px}}
+</style>
+</head>
+<body>
+<div class="sidebar">
+<h2 style="color:white;text-align:center">Menu</h2>
+<a href="#">Home</a>
+<a href="#">Profile</a>
+<a href="#">Courses</a>
+<a href="#">Contact</a>
+</div>
+<div class="content">
+<div class="card"><h1>Fixed Sidebar</h1><p>The sidebar remains fixed while the content can scroll.</p></div>
+<div class="card"><h2>About</h2><p>This page demonstrates position: fixed.</p></div>
+<div class="card"><h2>Content</h2><p>Fixed positioning keeps an element relative to the browser window.</p></div>
+<div class="navigation">
+<a href="css-50-sticky-header.html">← Previous</a>
+<a href="index.html">CSS Programs</a>
+<a href="css-52-responsive-footer.html">Next →</a>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CSS 64 - Mobile First</title>
+<style>
+body{font-family:Arial;margin:0;background:#f4f6f8}
+.container{padding:20px}
+.cards{display:flex;flex-direction:column;gap:15px}
+.card{background:white;padding:25px;border-radius:10px}
+@media(min-width:600px){.container{max-width:900px;margin:auto}.cards{flex-direction:row}.card{flex:1}}
+@media(min-width:1000px){.container{max-width:1200px}.card{padding:40px}}
+.navigation{margin-top:30px;display:flex;justify-content:space-between}
+a{background:#333;color:white;padding:10px 15px;text-decoration:none;border-radius:5px}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Mobile First Design</h1>
+<div class="cards">
+<div class="card"><h2>HTML</h2><p>Web structure.</p></div>
+<div class="card"><h2>CSS</h2><p>Web styling.</p></div>
+<div class="card"><h2>JavaScript</h2><p>Web interactivity.</p></div>
+</div>
+<div class="navigation">
+<a href="css-63-responsive-grid.html">← Previous</a>
+<a href="index.html">CSS Programs</a>
+<a href="css-65-transitions.html">Next →</a>
+</div>
+</div>
+</body>
+</html>

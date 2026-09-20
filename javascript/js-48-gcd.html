@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head><title>JS 48 - GCD</title></head>
+<body style="font-family:Arial;text-align:center;padding:50px">
+
+<h1>GCD of Two Numbers</h1>
+
+<input type="number" id="a" placeholder="First number">
+<input type="number" id="b" placeholder="Second number">
+<button onclick="findGCD()">Find GCD</button>
+
+<p id="result"></p>
+
+<script>
+function findGCD(){
+    let a=Math.abs(Number(document.getElementById("a").value));
+    let b=Math.abs(Number(document.getElementById("b").value));
+
+    while(b!==0){
+        let temp=b;
+        b=a%b;
+        a=temp;
+    }
+
+    document.getElementById("result").textContent="GCD = "+a;
+}
+</script>
+
+<br>
+<a href="../index.html">Home</a> | <a href="index.html">JavaScript Programs</a>
+</body>
+</html>

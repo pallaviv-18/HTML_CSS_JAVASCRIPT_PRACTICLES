@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Guessing Game</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        input {
+            padding: 10px;
+            width: 150px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+        }
+
+        #result {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Number Guessing Game</h2>
+
+<p>Guess a number between 1 and 100.</p>
+
+<input type="number" id="guess" placeholder="Enter number">
+
+<button onclick="checkGuess()">Guess</button>
+
+<p id="result"></p>
+
+<script>
+    const randomNumber = Math.floor(Math.random() * 100) + 1;
+
+    function checkGuess() {
+        const guess = Number(document.getElementById("guess").value);
+        const result = document.getElementById("result");
+
+        if (guess < 1 || guess > 100) {
+            result.innerHTML = "Enter a number between 1 and 100.";
+        } else if (guess === randomNumber) {
+            result.innerHTML = "🎉 Correct! You guessed the number.";
+        } else if (guess < randomNumber) {
+            result.innerHTML = "Too low! Try again.";
+        } else {
+            result.innerHTML = "Too high! Try again.";
+        }
+    }
+</script>
+
+<p>
+    <a href="../../index.html">Home</a> |
+    <a href="../index.html">JavaScript Programs</a>
+</p>
+
+</body>
+</html>

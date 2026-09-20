@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 07 - Fibonacci Series</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            background: white;
+            padding: 35px;
+            max-width: 550px;
+            margin: auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        input {
+            padding: 12px;
+            width: 80%;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 12px 25px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Fibonacci Series</h1>
+
+    <input type="number" id="terms" placeholder="Enter number of terms">
+
+    <br>
+
+    <button onclick="generateFibonacci()">Generate</button>
+
+    <div id="result"></div>
+</div>
+
+<script>
+    function generateFibonacci() {
+        let terms = Number(document.getElementById("terms").value);
+
+        if (terms <= 0 || !Number.isInteger(terms)) {
+            document.getElementById("result").textContent =
+                "Please enter a positive integer.";
+            return;
+        }
+
+        let a = 0;
+        let b = 1;
+        let series = [];
+
+        for (let i = 0; i < terms; i++) {
+            series.push(a);
+
+            let next = a + b;
+            a = b;
+            b = next;
+        }
+
+        document.getElementById("result").textContent =
+            "Fibonacci Series: " + series.join(", ");
+    }
+</script>
+
+<br>
+
+<a href="../index.html">Home</a> |
+<a href="index.html">JavaScript Programs</a>
+</body>
+</html>

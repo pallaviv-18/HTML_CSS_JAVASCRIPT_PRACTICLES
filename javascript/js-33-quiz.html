@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head><title>JS 33 - Quiz</title></head>
+<body style="font-family:Arial;text-align:center;padding:40px">
+
+<h1>JavaScript Quiz</h1>
+
+<p>Which keyword declares a constant?</p>
+
+<button onclick="check('var')">var</button>
+<button onclick="check('let')">let</button>
+<button onclick="check('const')">const</button>
+
+<p id="result"></p>
+
+<script>
+function check(answer){
+    document.getElementById("result").textContent=
+        answer==="const" ? "Correct! 🎉" : "Wrong answer.";
+}
+</script>
+
+<br>
+<a href="../index.html">Home</a> | <a href="index.html">JavaScript Programs</a>
+</body>
+</html>

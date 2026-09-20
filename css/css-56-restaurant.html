@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CSS 56 - Restaurant</title>
+<style>
+body{margin:0;font-family:Arial;background:#fff8f0}
+header{background:#5b1a1a;color:white;text-align:center;padding:40px}
+.menu{max-width:1000px;margin:30px auto;padding:20px}
+.items{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.item{background:white;padding:25px;text-align:center;border-radius:10px;box-shadow:0 3px 10px #ccc}
+.price{font-weight:bold;font-size:20px}
+.navigation{margin:30px auto;max-width:1000px;display:flex;justify-content:space-between}
+a{background:#5b1a1a;color:white;padding:10px 15px;text-decoration:none;border-radius:5px}
+@media(max-width:700px){.items{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><h1>Spice Garden</h1><p>Delicious Food & Great Taste</p></header>
+<div class="menu">
+<h2>Our Menu</h2>
+<div class="items">
+<div class="item"><h3>Paneer Tikka</h3><p>Grilled paneer with spices.</p><p class="price">₹220</p></div>
+<div class="item"><h3>Veg Biryani</h3><p>Fragrant rice with vegetables.</p><p class="price">₹180</p></div>
+<div class="item"><h3>Chocolate Cake</h3><p>Rich chocolate dessert.</p><p class="price">₹120</p></div>
+</div>
+</div>
+<div class="navigation">
+<a href="css-55-responsive-college-homepage.html">← Previous</a>
+<a href="index.html">CSS Programs</a>
+<a href="css-57-shopping.html">Next →</a>
+</div>
+</body>
+</html>

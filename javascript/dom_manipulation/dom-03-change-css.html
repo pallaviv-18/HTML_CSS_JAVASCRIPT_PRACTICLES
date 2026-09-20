@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change CSS Using JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 30px;
+        }
+
+        #box {
+            width: 250px;
+            padding: 30px;
+            margin: 30px auto;
+            background-color: lightblue;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="../../index.html">Home</a> |
+    <a href="../index.html">JavaScript Programs</a>
+
+    <h1>Change CSS Using JavaScript</h1>
+
+    <div id="box">Change My Style</div>
+
+    <button onclick="changeStyle()">Change Style</button>
+
+    <script>
+        function changeStyle() {
+            const box = document.getElementById("box");
+
+            box.style.backgroundColor = "lightgreen";
+            box.style.color = "darkgreen";
+            box.style.fontSize = "24px";
+            box.style.border = "3px solid green";
+        }
+    </script>
+
+</body>
+</html>

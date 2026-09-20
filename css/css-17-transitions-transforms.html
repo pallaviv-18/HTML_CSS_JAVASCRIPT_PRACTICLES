@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Experiment 17 - Transitions and Transforms</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+        }
+
+        header {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        nav {
+            background: #333;
+            text-align: center;
+            padding: 12px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 35px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .examples {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #007bff;
+            color: white;
+            border-radius: 10px;
+            font-weight: bold;
+
+            /* Transition */
+            transition: transform 0.5s, background 0.5s;
+        }
+
+        /* Scale */
+        .scale:hover {
+            transform: scale(1.2);
+        }
+
+        /* Rotate */
+        .rotate:hover {
+            transform: rotate(45deg);
+        }
+
+        /* Translate */
+        .translate:hover {
+            transform: translateY(-25px);
+        }
+
+        /* Skew */
+        .skew:hover {
+            transform: skew(15deg, 10deg);
+        }
+
+        .info {
+            margin-top: 35px;
+            padding: 20px;
+            background: #e8f4fc;
+            border-left: 5px solid #007bff;
+            border-radius: 6px;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: 95%;
+                padding: 20px;
+            }
+
+            .examples {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>CSS Experiment 17</h1>
+        <p>Transitions and Transforms</p>
+    </header>
+
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="index.html">CSS Programs</a>
+    </nav>
+
+    <main class="container">
+
+        <h2>Hover Over Each Box</h2>
+
+        <div class="examples">
+
+            <div class="box scale">
+                Scale
+            </div>
+
+            <div class="box rotate">
+                Rotate
+            </div>
+
+            <div class="box translate">
+                Translate
+            </div>
+
+            <div class="box skew">
+                Skew
+            </div>
+
+        </div>
+
+        <div class="info">
+            <h3>Properties Used</h3>
+
+            <ul>
+                <li><strong>transition</strong> — creates a smooth change.</li>
+                <li><strong>scale()</strong> — increases or decreases size.</li>
+                <li><strong>rotate()</strong> — rotates an element.</li>
+                <li><strong>translateY()</strong> — moves an element vertically.</li>
+                <li><strong>skew()</strong> — tilts an element.</li>
+            </ul>
+        </div>
+
+        <br>
+
+        <a href="index.html">← Back to CSS Programs</a>
+
+    </main>
+
+    <footer>
+        <p>CSS Practical Programs</p>
+    </footer>
+
+</body>
+</html>

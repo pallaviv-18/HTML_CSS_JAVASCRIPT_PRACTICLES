@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Experiment 11 - Pseudo Elements</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+        }
+
+        header {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        nav {
+            background: #333;
+            text-align: center;
+            padding: 12px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 900px;
+            margin: 35px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        /* ::before */
+        .before-example::before {
+            content: "★ ";
+        }
+
+        /* ::after */
+        .after-example::after {
+            content: " ✓";
+        }
+
+        /* ::first-letter */
+        .first-letter-example::first-letter {
+            font-size: 45px;
+            font-weight: bold;
+        }
+
+        /* ::first-line */
+        .first-line-example::first-line {
+            font-weight: bold;
+        }
+
+        .example {
+            margin: 20px 0;
+            padding: 20px;
+            background: #f1f1f1;
+            border-radius: 8px;
+        }
+
+        .info {
+            margin-top: 25px;
+            padding: 18px;
+            border-left: 5px solid #007bff;
+            background: #e8f4fc;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: 90%;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>CSS Experiment 11</h1>
+        <p>Pseudo-Elements</p>
+    </header>
+
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="index.html">CSS Programs</a>
+    </nav>
+
+    <main class="container">
+
+        <h2>::before</h2>
+
+        <div class="example">
+            <p class="before-example">
+                This text has content added before it using CSS.
+            </p>
+        </div>
+
+
+        <h2>::after</h2>
+
+        <div class="example">
+            <p class="after-example">
+                This text has content added after it using CSS.
+            </p>
+        </div>
+
+
+        <h2>::first-letter</h2>
+
+        <div class="example">
+            <p class="first-letter-example">
+                This paragraph demonstrates the first-letter
+                pseudo-element. The first letter is styled differently
+                from the remaining text.
+            </p>
+        </div>
+
+
+        <h2>::first-line</h2>
+
+        <div class="example">
+            <p class="first-line-example">
+                This is the first line of the paragraph and it is
+                styled using the first-line pseudo-element. The remaining
+                text continues normally on the following lines.
+            </p>
+        </div>
+
+
+        <div class="info">
+            <strong>Pseudo-elements used:</strong>
+            <ul>
+                <li>::before</li>
+                <li>::after</li>
+                <li>::first-letter</li>
+                <li>::first-line</li>
+            </ul>
+        </div>
+
+        <br>
+
+        <a href="index.html">← Back to CSS Programs</a>
+
+    </main>
+
+    <footer>
+        <p>CSS Practical Programs</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS 21 - DOM Events</title>
+<style>
+body{text-align:center;font-family:Arial;padding:40px;background:#f4f7fb}
+.box{background:white;padding:30px;max-width:500px;margin:auto;border-radius:15px}
+button{padding:12px;margin:8px;background:#2563eb;color:white;border:0;border-radius:7px}
+</style>
+</head>
+<body>
+<div class="box">
+<h1 id="title">DOM & Events</h1>
+<button onclick="changeTitle()">Click Me</button>
+<p id="result">Waiting for event...</p>
+</div>
+
+<script>
+function changeTitle(){
+    document.getElementById("title").textContent="Event Executed!";
+    document.getElementById("result").textContent="Button click event occurred.";
+}
+</script>
+<br>
+<a href="../index.html">Home</a> | <a href="index.html">JavaScript Programs</a>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CSS 69 - Sliding Animation</title>
+<style>
+body{font-family:Arial;background:#f4f6f8;padding:30px;text-align:center}
+.container{max-width:800px;margin:auto;background:white;padding:30px;border-radius:12px;overflow:hidden}
+.slider{display:flex;width:300%;animation:slide 9s infinite}
+.slide{width:33.333%;padding:60px 0;background:#dbeafe;font-size:30px}
+.slide:nth-child(2){background:#dcfce7}
+.slide:nth-child(3){background:#fef3c7}
+@keyframes slide{
+0%,30%{transform:translateX(0)}
+35%,65%{transform:translateX(-33.333%)}
+70%,100%{transform:translateX(-66.666%)}
+}
+.navigation{margin-top:30px;display:flex;justify-content:space-between}
+a{background:#333;color:white;padding:10px 15px;text-decoration:none;border-radius:5px}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Sliding Card Animation</h1>
+<div class="slider">
+<div class="slide">HTML</div>
+<div class="slide">CSS</div>
+<div class="slide">JavaScript</div>
+</div>
+<div class="navigation">
+<a href="css-68-spinner.html">← Previous</a>
+<a href="index.html">CSS Programs</a>
+<a href="css-70-modal.html">Next →</a>
+</div>
+</div>
+</body>
+</html>

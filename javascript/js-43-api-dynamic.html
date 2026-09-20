@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head><title>JS 43 - Display API Data</title></head>
+<body style="font-family:Arial;text-align:center;padding:40px">
+
+<h1>Dynamic API Data</h1>
+<button onclick="loadData()">Load User</button>
+<div id="result"></div>
+
+<script>
+async function loadData(){
+    let response=await fetch("https://jsonplaceholder.typicode.com/users/1");
+    let user=await response.json();
+
+    document.getElementById("result").innerHTML=
+        "<h2>"+user.name+"</h2>"+
+        "<p>Email: "+user.email+"</p>"+
+        "<p>City: "+user.address.city+"</p>";
+}
+</script>
+
+<br>
+<a href="../index.html">Home</a> | <a href="index.html">JavaScript Programs</a>
+</body>
+</html>

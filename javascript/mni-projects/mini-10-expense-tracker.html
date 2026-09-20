@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expense Tracker</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin: 40px;
+        }
+
+        input {
+            padding: 10px;
+            margin: 5px;
+        }
+
+        button {
+            padding: 10px 15px;
+        }
+
+        li {
+            list-style: none;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Expense Tracker</h2>
+
+<input type="text" id="expenseName" placeholder="Expense name">
+<input type="number" id="expenseAmount" placeholder="Amount">
+
+<button onclick="addExpense()">Add</button>
+
+<h3>Total: ₹<span id="total">0</span></h3>
+
+<ul id="expenseList"></ul>
+
+<script>
+    let total = 0;
+
+    function addExpense() {
+        const name = document.getElementById("expenseName").value;
+        const amount = Number(
+            document.getElementById("expenseAmount").value
+        );
+
+        if (name.trim() === "" || amount <= 0) {
+            alert("Enter valid expense details.");
+            return;
+        }
+
+        total += amount;
+
+        const li = document.createElement("li");
+        li.innerHTML = name + " - ₹" + amount;
+
+        document.getElementById("expenseList").appendChild(li);
+
+        document.getElementById("total").innerHTML = total;
+
+        document.getElementById("expenseName").value = "";
+        document.getElementById("expenseAmount").value = "";
+    }
+</script>
+
+<p>
+    <a href="../../index.html">Home</a> |
+    <a href="../index.html">JavaScript Programs</a>
+</p>
+
+</body>
+</html>

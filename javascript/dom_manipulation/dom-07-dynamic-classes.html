@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic CSS Classes</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 30px;
+        }
+
+        #box {
+            width: 250px;
+            padding: 30px;
+            margin: 30px auto;
+            border: 2px solid #333;
+        }
+
+        .active {
+            background-color: lightgreen;
+            color: darkgreen;
+            border-radius: 15px;
+            transform: scale(1.05);
+        }
+
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="../../index.html">Home</a> |
+    <a href="../index.html">JavaScript Programs</a>
+
+    <h1>Create and Remove CSS Classes Dynamically</h1>
+
+    <div id="box">My Box</div>
+
+    <button onclick="addClass()">Add Class</button>
+    <button onclick="removeClass()">Remove Class</button>
+    <button onclick="toggleClass()">Toggle Class</button>
+
+    <script>
+        function addClass() {
+            document.getElementById("box").classList.add("active");
+        }
+
+        function removeClass() {
+            document.getElementById("box").classList.remove("active");
+        }
+
+        function toggleClass() {
+            document.getElementById("box").classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>

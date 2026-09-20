@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CSS 48 - Two Column Grid</title>
+<style>
+body{font-family:Arial;background:#f4f6f8;padding:30px}
+.container{max-width:1000px;margin:auto;background:white;padding:30px;border-radius:12px}
+.layout{display:grid;grid-template-columns:1fr 2fr;gap:20px}
+.box{padding:30px;border-radius:10px;background:#eee}
+.left{background:#dbeafe}.right{background:#dcfce7}
+.navigation{margin-top:30px;display:flex;justify-content:space-between}
+a{background:#333;color:white;padding:10px 15px;text-decoration:none;border-radius:5px}
+@media(max-width:650px){.layout{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Two Column Grid</h1>
+<div class="layout">
+<div class="box left"><h2>Sidebar</h2><p>Navigation and additional information.</p></div>
+<div class="box right"><h2>Main Content</h2><p>This is the main content area of the webpage.</p></div>
+</div>
+<div class="navigation">
+<a href="css-47-dashboard-grid.html">← Previous</a>
+<a href="index.html">CSS Programs</a>
+<a href="css-49-three-column-flexbox.html">Next →</a>
+</div>
+</div>
+</body>
+</html>

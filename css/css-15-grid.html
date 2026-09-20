@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Experiment 15 - Grid</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+        }
+
+        header {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        nav {
+            background: #333;
+            text-align: center;
+            padding: 12px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 35px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        /* CSS Grid */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .grid-item {
+            padding: 35px 20px;
+            background: #007bff;
+            color: white;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+
+        .wide {
+            grid-column: span 2;
+        }
+
+        .info {
+            margin-top: 30px;
+            padding: 20px;
+            background: #e8f4fc;
+            border-left: 5px solid #007bff;
+            border-radius: 6px;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 700px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .wide {
+                grid-column: span 2;
+            }
+        }
+
+        @media (max-width: 450px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+
+            .wide {
+                grid-column: span 1;
+            }
+
+            .container {
+                width: 95%;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>CSS Experiment 15</h1>
+        <p>CSS Grid Layout</p>
+    </header>
+
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="index.html">CSS Programs</a>
+    </nav>
+
+    <main class="container">
+
+        <h2>Grid Layout</h2>
+
+        <div class="grid-container">
+
+            <div class="grid-item">HTML</div>
+
+            <div class="grid-item">CSS</div>
+
+            <div class="grid-item">JavaScript</div>
+
+            <div class="grid-item wide">Web Development</div>
+
+            <div class="grid-item">Python</div>
+
+            <div class="grid-item">Data Structures</div>
+
+        </div>
+
+        <div class="info">
+            <h3>CSS Grid Properties Used</h3>
+
+            <ul>
+                <li><strong>display: grid</strong> — creates the grid container.</li>
+                <li><strong>grid-template-columns</strong> — defines the columns.</li>
+                <li><strong>gap</strong> — creates spacing between grid items.</li>
+                <li><strong>grid-column</strong> — allows an item to span multiple columns.</li>
+                <li><strong>@media</strong> — makes the grid responsive.</li>
+            </ul>
+        </div>
+
+        <br>
+
+        <a href="index.html">← Back to CSS Programs</a>
+
+    </main>
+
+    <footer>
+        <p>CSS Practical Programs</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS 17 - Strings</title>
+<style>
+body{font-family:Arial;text-align:center;padding:40px;background:#f4f7fb}
+.box{background:white;padding:30px;max-width:550px;margin:auto;border-radius:15px}
+input,button{padding:12px;margin:8px}button{background:#2563eb;color:white;border:0;border-radius:7px}
+</style>
+</head>
+<body>
+<div class="box">
+<h1>String Methods</h1>
+<input id="text" placeholder="Enter text">
+<br>
+<button onclick="processString()">Show Methods</button>
+<p id="result"></p>
+</div>
+
+<script>
+function processString(){
+    let s=document.getElementById("text").value;
+    document.getElementById("result").innerHTML=
+    "Length: "+s.length+
+    "<br>Uppercase: "+s.toUpperCase()+
+    "<br>Lowercase: "+s.toLowerCase()+
+    "<br>Reverse: "+s.split("").reverse().join("");
+}
+</script>
+<br>
+<a href="../index.html">Home</a> | <a href="index.html">JavaScript Programs</a>
+</body>
+</html>

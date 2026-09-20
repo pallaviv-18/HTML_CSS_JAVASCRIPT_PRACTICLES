@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CSS 61 - Grid Template Areas</title>
+<style>
+body{font-family:Arial;background:#f4f6f8;padding:20px}
+.layout{max-width:1000px;margin:auto;display:grid;grid-template-areas:"header header" "sidebar main" "footer footer";grid-template-columns:220px 1fr;gap:10px}
+header{grid-area:header;background:#222;color:white;padding:30px;text-align:center}
+aside{grid-area:sidebar;background:#ddd;padding:30px}
+main{grid-area:main;background:white;padding:30px}
+footer{grid-area:footer;background:#222;color:white;padding:20px;text-align:center}
+.navigation{margin:30px auto;max-width:1000px;display:flex;justify-content:space-between}
+a{background:#333;color:white;padding:10px 15px;text-decoration:none;border-radius:5px}
+@media(max-width:600px){.layout{grid-template-areas:"header" "sidebar" "main" "footer";grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="layout">
+<header><h1>Grid Template Areas</h1></header>
+<aside><h2>Sidebar</h2><p>Menu</p><p>Profile</p><p>Settings</p></aside>
+<main><h2>Main Content</h2><p>This layout uses named grid areas.</p></main>
+<footer>© 2026 My Website</footer>
+</div>
+<div class="navigation">
+<a href="css-60-multi-section-portfolio.html">← Previous</a>
+<a href="index.html">CSS Programs</a>
+<a href="css-62-flex-alignment-ordering.html">Next →</a>
+</div>
+</body>
+</html>

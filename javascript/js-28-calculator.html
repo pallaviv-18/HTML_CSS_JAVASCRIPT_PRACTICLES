@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS 28 - Calculator</title>
+<style>
+body{text-align:center;font-family:Arial;background:#f4f7fb;padding:40px}
+.calculator{background:white;padding:25px;max-width:350px;margin:auto;border-radius:15px}
+input{padding:12px;width:80%;margin:8px}
+button{padding:12px;margin:5px;width:55px;background:#2563eb;color:white;border:0;border-radius:6px}
+#result{font-size:22px;font-weight:bold;margin:15px}
+</style>
+</head>
+<body>
+<div class="calculator">
+<h1>Calculator</h1>
+<input type="number" id="a" placeholder="First number">
+<input type="number" id="b" placeholder="Second number">
+
+<button onclick="calc('+')">+</button>
+<button onclick="calc('-')">−</button>
+<button onclick="calc('*')">×</button>
+<button onclick="calc('/')">÷</button>
+
+<div id="result"></div>
+</div>
+
+<script>
+function calc(op){
+    let a=Number(document.getElementById("a").value);
+    let b=Number(document.getElementById("b").value);
+    let r;
+
+    if(op==="+") r=a+b;
+    if(op==="-") r=a-b;
+    if(op==="*") r=a*b;
+    if(op==="/") r=b!==0?a/b:"Cannot divide by zero";
+
+    document.getElementById("result").textContent=r;
+}
+</script>
+
+<br>
+<a href="../index.html">Home</a> | <a href="index.html">JavaScript Programs</a>
+</body>
+</html>

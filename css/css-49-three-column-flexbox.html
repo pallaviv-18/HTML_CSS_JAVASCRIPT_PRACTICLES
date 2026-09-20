@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CSS 49 - Three Column Flexbox</title>
+<style>
+body{font-family:Arial;background:#f4f6f8;padding:30px}
+.container{max-width:1000px;margin:auto;background:white;padding:30px;border-radius:12px}
+.columns{display:flex;gap:20px}
+.column{flex:1;background:#eee;padding:30px;border-radius:10px;text-align:center}
+.navigation{margin-top:30px;display:flex;justify-content:space-between}
+a{background:#333;color:white;padding:10px 15px;text-decoration:none;border-radius:5px}
+@media(max-width:700px){.columns{flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Three Column Flexbox</h1>
+<div class="columns">
+<div class="column"><h2>HTML</h2><p>Structure of webpages.</p></div>
+<div class="column"><h2>CSS</h2><p>Design and layout.</p></div>
+<div class="column"><h2>JavaScript</h2><p>Webpage interactivity.</p></div>
+</div>
+<div class="navigation">
+<a href="css-48-two-column-grid.html">← Previous</a>
+<a href="index.html">CSS Programs</a>
+<a href="css-50-sticky-header.html">Next →</a>
+</div>
+</div>
+</body>
+</html>

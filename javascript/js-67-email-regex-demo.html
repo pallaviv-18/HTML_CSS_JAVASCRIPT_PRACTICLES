@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS 67 - Email Regex Demo</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 50px;
+            background: #f4f7fb;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            max-width: 500px;
+            margin: auto;
+            border-radius: 15px;
+        }
+
+        input, button {
+            padding: 12px;
+            margin: 8px;
+        }
+
+        input {
+            width: 80%;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 7px;
+        }
+
+        #result {
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h1>Email Regex Demo</h1>
+
+    <p>Enter an email address to test the regular expression.</p>
+
+    <input id="email" placeholder="example@gmail.com">
+
+    <br>
+
+    <button onclick="checkEmail()">Check Email</button>
+
+    <p id="result"></p>
+</div>
+
+<script>
+function checkEmail() {
+    let email = document.getElementById("email").value;
+
+    let emailRegex =
+        /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+
+    if (emailRegex.test(email)) {
+        document.getElementById("result").textContent =
+            "Email format is valid.";
+    } else {
+        document.getElementById("result").textContent =
+            "Email format is invalid.";
+    }
+}
+</script>
+
+<br>
+
+<a href="../index.html">Home</a> |
+<a href="index.html">JavaScript Programs</a>
+
+</body>
+</html>

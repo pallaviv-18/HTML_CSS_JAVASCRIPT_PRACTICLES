@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML Experiment 2 - Lists</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #e53935, #b71c1c);
+            color: white;
+            padding: 25px 8%;
+        }
+
+        header h1 {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* Navigation */
+        nav {
+            margin-top: 15px;
+        }
+
+        nav a {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            padding: 8px 15px;
+            border-radius: 6px;
+            margin-right: 8px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            background: white;
+            color: #b71c1c;
+        }
+
+        /* Main */
+        main {
+            width: 90%;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        .container {
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .title h2 {
+            color: #b71c1c;
+            font-size: 27px;
+        }
+
+        .title p {
+            color: #666;
+            margin-top: 5px;
+        }
+
+        /* List cards */
+        .lists-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .list-card {
+            background: #fafafa;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            padding: 25px;
+            transition: 0.3s;
+        }
+
+        .list-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .list-card h3 {
+            color: #b71c1c;
+            margin-bottom: 15px;
+            font-size: 19px;
+        }
+
+        .list-card ol,
+        .list-card ul {
+            padding-left: 25px;
+        }
+
+        .list-card li {
+            margin-bottom: 8px;
+        }
+
+        /* Description list */
+        .list-card dl {
+            margin-top: 5px;
+        }
+
+        .list-card dt {
+            font-weight: bold;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        .list-card dd {
+            margin-left: 15px;
+            color: #666;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #777;
+            font-size: 13px;
+        }
+
+        /* Responsive */
+        @media (max-width: 800px) {
+            .lists-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 23px;
+            }
+
+            main {
+                width: 94%;
+            }
+
+            .container {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>HTML Practical Lab</h1>
+        <p>Experiment 02 — HTML Lists</p>
+
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="index.html">Back to Programs</a>
+        </nav>
+    </header>
+
+
+    <!-- Main Content -->
+    <main>
+
+        <div class="container">
+
+            <div class="title">
+                <h2>Ordered, Unordered & Description Lists</h2>
+                <p>Demonstration of different types of HTML lists</p>
+            </div>
+
+
+            <div class="lists-container">
+
+                <!-- Ordered List -->
+                <div class="list-card">
+
+                    <h3>1. Ordered List</h3>
+
+                    <ol>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Python</li>
+                        <li>Java</li>
+                    </ol>
+
+                </div>
+
+
+                <!-- Unordered List -->
+                <div class="list-card">
+
+                    <h3>2. Unordered List</h3>
+
+                    <ul>
+                        <li>Web Development</li>
+                        <li>Data Structures</li>
+                        <li>Database Management</li>
+                        <li>Computer Networks</li>
+                        <li>Operating Systems</li>
+                    </ul>
+
+                </div>
+
+
+                <!-- Description List -->
+                <div class="list-card">
+
+                    <h3>3. Description List</h3>
+
+                    <dl>
+
+                        <dt>HTML</dt>
+                        <dd>Used to structure webpages.</dd>
+
+                        <dt>CSS</dt>
+                        <dd>Used to style webpages.</dd>
+
+                        <dt>JavaScript</dt>
+                        <dd>Used to add interactivity.</dd>
+
+                    </dl>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        HTML Practical Lab &copy; 2026
+    </footer>
+
+</body>
+</html>

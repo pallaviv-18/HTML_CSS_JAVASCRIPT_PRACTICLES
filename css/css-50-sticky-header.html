@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CSS 50 - Sticky Header</title>
+<style>
+body{margin:0;font-family:Arial;background:#f4f6f8}
+header{position:sticky;top:0;background:#222;color:white;padding:20px;text-align:center;z-index:10}
+main{max-width:900px;margin:auto;padding:30px}
+section{background:white;padding:30px;margin:20px 0;border-radius:10px;height:250px}
+.navigation{padding:20px;display:flex;justify-content:space-between}
+a{background:#333;color:white;padding:10px 15px;text-decoration:none;border-radius:5px}
+</style>
+</head>
+<body>
+<header><h1>My Sticky Header</h1><p>Scroll down to see the effect</p></header>
+<main>
+<section><h2>Section 1</h2><p>Content of the first section.</p></section>
+<section><h2>Section 2</h2><p>Content of the second section.</p></section>
+<section><h2>Section 3</h2><p>Content of the third section.</p></section>
+<section><h2>Section 4</h2><p>Content of the fourth section.</p></section>
+</main>
+<div class="navigation">
+<a href="css-49-three-column-flexbox.html">← Previous</a>
+<a href="index.html">CSS Programs</a>
+<a href="css-51-fixed-sidebar.html">Next →</a>
+</div>
+</body>
+</html>

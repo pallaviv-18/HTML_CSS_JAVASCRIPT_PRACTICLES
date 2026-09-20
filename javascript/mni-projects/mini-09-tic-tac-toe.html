@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tic-Tac-Toe</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .board {
+            display: grid;
+            grid-template-columns: repeat(3, 80px);
+            gap: 5px;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .cell {
+            width: 80px;
+            height: 80px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        button {
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Tic-Tac-Toe</h2>
+
+<div class="board" id="board"></div>
+
+<h3 id="message">Player X's turn</h3>
+
+<button onclick="resetGame()">Restart</button>
+
+<script>
+    let board = ["", "", "", "", "", "", "", ""];
+    let currentPlayer = "X";
+    let gameOver = false;
+
+    const winningPatterns = [
+        [0,1,2], [3,4,5], [6,7,8],
+        [0,3,6], [1,4,7], [2,5,8],
+        [0,4,8], [2,4,6]
+    ];
+
+    function createBoard() {
+        const boardElement = document.getElementById("board");
+        boardElement.innerHTML = "";
+
+        board.forEach((value, index) => {
+            const cell = document.createElement("button");
+            cell.className = "cell";
+            cell.innerHTML = value;
+            cell.onclick = () => makeMove(index);
+            boardElement.appendChild(cell);
+        });
+    }
+
+    function makeMove(index) {
+        if (board[index] !== "" || gameOver) {
+            return;
+        }
+
+        board[index] = currentPlayer;
+
+        if (checkWinner()) {
+            document.getElementById("message").innerHTML =
+                "Player " + currentPlayer + " wins!";
+            gameOver = true;
+        } else if (!board.includes("")) {
+            document.getElementById("message").innerHTML = "It's a draw!";
+            gameOver = true;
+        } else {
+            currentPlayer = currentPlayer === "X" ? "O" : "X";
+
+            document.getElementById("message").innerHTML =
+                "Player " + currentPlayer + "'s turn";
+        }
+
+        createBoard();
+    }
+
+    function checkWinner() {
+        return winningPatterns.some(pattern => {
+            return pattern.every(index => board[index] === currentPlayer);
+        });
+    }
+
+    function resetGame() {
+        board = ["", "", "", "", "", "", "", ""];
+        currentPlayer = "X";
+        gameOver = false;
+
+        document.getElementById("message").innerHTML =
+            "Player X's turn";
+
+        createBoard();
+    }
+
+    createBoard();
+</script>
+
+<p>
+    <a href="../../index.html">Home</a> |
+    <a href="../index.html">JavaScript Programs</a>
+</p>
+
+</body>
+</html>

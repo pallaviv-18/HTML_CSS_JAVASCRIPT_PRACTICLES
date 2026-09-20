@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Experiment 18 - Animations</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+        }
+
+        header {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        nav {
+            background: #333;
+            text-align: center;
+            padding: 12px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 35px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .animation-area {
+            min-height: 350px;
+            background: #f1f1f1;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            margin-top: 25px;
+        }
+
+        /* Moving box animation */
+        .moving-box {
+            width: 100px;
+            height: 100px;
+            background: #007bff;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+
+            position: absolute;
+            top: 30px;
+            left: 20px;
+
+            animation: moveBox 4s infinite alternate ease-in-out;
+        }
+
+        @keyframes moveBox {
+            0% {
+                left: 20px;
+                transform: rotate(0deg);
+            }
+
+            50% {
+                left: 45%;
+                transform: rotate(180deg);
+            }
+
+            100% {
+                left: calc(100% - 120px);
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Pulsing circle */
+        .pulse {
+            width: 80px;
+            height: 80px;
+            background: #28a745;
+            border-radius: 50%;
+
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            animation: pulseEffect 1.5s infinite;
+        }
+
+        @keyframes pulseEffect {
+            0% {
+                transform: translateX(-50%) scale(1);
+            }
+
+            50% {
+                transform: translateX(-50%) scale(1.4);
+            }
+
+            100% {
+                transform: translateX(-50%) scale(1);
+            }
+        }
+
+        .info {
+            margin-top: 30px;
+            padding: 20px;
+            background: #e8f4fc;
+            border-left: 5px solid #007bff;
+            border-radius: 6px;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: 95%;
+                padding: 20px;
+            }
+
+            .animation-area {
+                min-height: 320px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>CSS Experiment 18</h1>
+        <p>CSS Animations</p>
+    </header>
+
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="index.html">CSS Programs</a>
+    </nav>
+
+    <main class="container">
+
+        <h2>CSS Animation Demo</h2>
+
+        <p style="text-align: center;">
+            The boxes below are animated using CSS
+            <strong>@keyframes</strong>.
+        </p>
+
+        <div class="animation-area">
+
+            <div class="moving-box">
+                Move
+            </div>
+
+            <div class="pulse"></div>
+
+        </div>
+
+        <div class="info">
+
+            <h3>Properties Used</h3>
+
+            <ul>
+                <li><strong>@keyframes</strong> — defines animation steps.</li>
+                <li><strong>animation-name</strong> — specifies the animation.</li>
+                <li><strong>animation-duration</strong> — controls animation speed.</li>
+                <li><strong>animation-iteration-count</strong> — controls repetition.</li>
+                <li><strong>animation-direction</strong> — controls animation direction.</li>
+                <li><strong>animation-timing-function</strong> — controls movement speed.</li>
+            </ul>
+
+        </div>
+
+        <br>
+
+        <a href="index.html">← Back to CSS Programs</a>
+
+    </main>
+
+    <footer>
+        <p>CSS Practical Programs</p>
+    </footer>
+
+</body>
+</html>

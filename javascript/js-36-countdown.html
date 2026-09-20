@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head><title>JS 36 - Countdown</title></head>
+<body style="font-family:Arial;text-align:center;padding:50px">
+
+<h1>Countdown Timer</h1>
+
+<input type="number" id="seconds" placeholder="Seconds">
+<button onclick="start()">Start</button>
+
+<h2 id="result"></h2>
+
+<script>
+let timer;
+
+function start(){
+    clearInterval(timer);
+
+    let seconds=Number(document.getElementById("seconds").value);
+
+    timer=setInterval(function(){
+        document.getElementById("result").textContent=seconds;
+
+        if(seconds<=0){
+            clearInterval(timer);
+            document.getElementById("result").textContent="Time's Up!";
+        }
+
+        seconds--;
+    },1000);
+}
+</script>
+
+<br>
+<a href="../index.html">Home</a> | <a href="index.html">JavaScript Programs</a>
+</body>
+</html>

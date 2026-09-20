@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Experiment 14 - Flexbox</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+        }
+
+        header {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        nav {
+            background: #333;
+            text-align: center;
+            padding: 12px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 35px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        .container h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        /* Flexbox container */
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 20px;
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        /* Flex items */
+        .flex-item {
+            flex: 1;
+            min-width: 180px;
+            padding: 30px 20px;
+            text-align: center;
+            background: #007bff;
+            color: white;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .second-section {
+            margin-top: 35px;
+        }
+
+        .center-box {
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #e8f4fc;
+            border-radius: 10px;
+        }
+
+        .center-content {
+            padding: 25px 40px;
+            background: #333;
+            color: white;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: 95%;
+                padding: 20px;
+            }
+
+            .flex-container {
+                flex-direction: column;
+            }
+
+            .flex-item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>CSS Experiment 14</h1>
+        <p>Flexbox Layout</p>
+    </header>
+
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="index.html">CSS Programs</a>
+    </nav>
+
+    <main class="container">
+
+        <h2>Flexbox Row Layout</h2>
+
+        <div class="flex-container">
+
+            <div class="flex-item">
+                HTML
+            </div>
+
+            <div class="flex-item">
+                CSS
+            </div>
+
+            <div class="flex-item">
+                JavaScript
+            </div>
+
+        </div>
+
+        <section class="second-section">
+
+            <h2>Centering with Flexbox</h2>
+
+            <div class="center-box">
+
+                <div class="center-content">
+                    Perfectly Centered
+                </div>
+
+            </div>
+
+        </section>
+
+        <br>
+
+        <a href="index.html">← Back to CSS Programs</a>
+
+    </main>
+
+    <footer>
+        <p>CSS Practical Programs</p>
+    </footer>
+
+</body>
+</html>

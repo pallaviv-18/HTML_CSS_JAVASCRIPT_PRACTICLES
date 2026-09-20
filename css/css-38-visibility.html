@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 38 - Visibility</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .box {
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            color: white;
+        }
+
+        .visible {
+            background: #3498db;
+            visibility: visible;
+        }
+
+        .hidden {
+            background: #e74c3c;
+            visibility: hidden;
+        }
+
+        .normal {
+            background: #27ae60;
+        }
+
+        .explanation {
+            background: #f1f1f1;
+            padding: 20px;
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+
+        .navigation {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navigation a {
+            background: #333;
+            color: white;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>CSS Experiment 38 - Visibility</h1>
+
+    <div class="box visible">
+        This box is visible.
+    </div>
+
+    <div class="box hidden">
+        This box is hidden using visibility: hidden.
+    </div>
+
+    <div class="box normal">
+        This box is visible after the hidden box.
+    </div>
+
+    <div class="explanation">
+        <h2>visibility: hidden</h2>
+
+        <p>
+            The <strong>visibility: hidden</strong> property hides an
+            element but keeps its original space in the page.
+        </p>
+
+        <p>
+            This is different from <strong>display: none</strong>,
+            which removes the element from the layout.
+        </p>
+    </div>
+
+    <div class="navigation">
+        <a href="css-37-display.html">← Previous</a>
+        <a href="index.html">CSS Programs</a>
+        <a href="css-39-dropdown.html">Next →</a>
+    </div>
+
+</div>
+
+</body>
+</html>

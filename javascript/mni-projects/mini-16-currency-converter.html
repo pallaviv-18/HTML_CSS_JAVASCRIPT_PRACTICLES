@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Currency Converter</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        input, select {
+            padding: 10px;
+            margin: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+        }
+
+        #result {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Currency Converter</h2>
+
+<input type="number" id="amount" placeholder="Amount">
+
+<select id="from">
+    <option value="USD">USD</option>
+    <option value="INR">INR</option>
+    <option value="EUR">EUR</option>
+</select>
+
+<select id="to">
+    <option value="INR">INR</option>
+    <option value="USD">USD</option>
+    <option value="EUR">EUR</option>
+</select>
+
+<br>
+
+<button onclick="convertCurrency()">Convert</button>
+
+<div id="result"></div>
+
+<script>
+    async function convertCurrency() {
+        const amount =
+            Number(document.getElementById("amount").value);
+
+        const from =
+            document.getElementById("from").value;
+
+        const to =
+            document.getElementById("to").value;
+
+        if (amount <= 0) {
+            alert("Enter a valid amount.");
+            return;
+        }
+
+        if (from === to) {
+            document.getElementById("result").innerHTML =
+                amount + " " + from + " = " +
+                amount + " " + to;
+            return;
+        }
+
+        const url =
+            `https://api.frankfurter.app/latest?amount=${amount}&from=${from}&to=${to}`;
+
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+
+            const converted = data.rates[to];
+
+            document.getElementById("result").innerHTML =
+                amount + " " + from + " = " +
+                converted.toFixed(2) + " " + to;
+        } catch (error) {
+            document.getElementById("result").innerHTML =
+                "Unable to convert currency.";
+        }
+    }
+</script>
+
+<p>
+    <a href="../../index.html">Home</a> |
+    <a href="../index.html">JavaScript Programs</a>
+</p>
+
+</body>
+</html>

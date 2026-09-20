@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Experiment 9 - Navigation Bar</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+        }
+
+        header {
+            text-align: center;
+            padding: 25px;
+            background: #222;
+            color: white;
+        }
+
+        .navbar {
+            background: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 16px 22px;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover {
+            background: #555;
+        }
+
+        .navbar a.active {
+            background: #007bff;
+        }
+
+        .content {
+            width: 85%;
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .content h2 {
+            margin-bottom: 15px;
+        }
+
+        .buttons {
+            margin-top: 25px;
+        }
+
+        .buttons a {
+            display: inline-block;
+            padding: 10px 18px;
+            margin: 5px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .buttons a:hover {
+            background: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            background: #222;
+            color: white;
+            padding: 15px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+            }
+
+            .navbar a {
+                width: 100%;
+                text-align: center;
+            }
+
+            .content {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>CSS Experiment 9</h1>
+        <p>Navigation Bar</p>
+    </header>
+
+    <nav class="navbar">
+        <a href="#" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main class="content">
+
+        <h2>Welcome to My Website</h2>
+
+        <p>
+            This experiment demonstrates how to create a
+            responsive navigation bar using CSS.
+        </p>
+
+        <p>
+            The navigation links use padding, colors,
+            hover effects and Flexbox for alignment.
+        </p>
+
+        <div class="buttons">
+            <a href="../index.html">Home Dashboard</a>
+            <a href="index.html">CSS Programs</a>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>CSS Practical Programs</p>
+    </footer>
+
+</body>
+</html>

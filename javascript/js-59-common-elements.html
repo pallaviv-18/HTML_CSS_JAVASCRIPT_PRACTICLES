@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS 59 - Common Elements</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 50px;
+            background: #f4f7fb;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            max-width: 500px;
+            margin: auto;
+            border-radius: 15px;
+        }
+
+        input, button {
+            padding: 12px;
+            margin: 8px;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 7px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h1>Common Elements</h1>
+
+    <input id="arr1" placeholder="1,2,3,4">
+    <input id="arr2" placeholder="3,4,5,6">
+
+    <br>
+
+    <button onclick="findCommon()">Find Common</button>
+
+    <p id="result"></p>
+</div>
+
+<script>
+function findCommon() {
+    let a = document.getElementById("arr1").value.split(",");
+    let b = document.getElementById("arr2").value.split(",");
+
+    let common = a.filter(item => b.includes(item));
+
+    document.getElementById("result").textContent =
+        "Common Elements: " + [...new Set(common)].join(", ");
+}
+</script>
+
+<br>
+
+<a href="../index.html">Home</a> |
+<a href="index.html">JavaScript Programs</a>
+
+</body>
+</html>

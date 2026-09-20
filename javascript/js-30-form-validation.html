@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head><title>JS 30 - Form Validation</title></head>
+<body style="font-family:Arial;padding:40px">
+
+<h1>Form Validation</h1>
+
+<form onsubmit="return validateForm()">
+    <input id="name" placeholder="Name"><br><br>
+    <input id="email" type="email" placeholder="Email"><br><br>
+    <button type="submit">Submit</button>
+</form>
+
+<p id="result"></p>
+
+<script>
+function validateForm(){
+    let name=document.getElementById("name").value.trim();
+    let email=document.getElementById("email").value.trim();
+
+    if(name==="" || email===""){
+        document.getElementById("result").textContent="All fields are required.";
+        return false;
+    }
+
+    document.getElementById("result").textContent="Form submitted successfully!";
+    return false;
+}
+</script>
+
+<br>
+<a href="../index.html">Home</a> | <a href="index.html">JavaScript Programs</a>
+</body>
+</html>

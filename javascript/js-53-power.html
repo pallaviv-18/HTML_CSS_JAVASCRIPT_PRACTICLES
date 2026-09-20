@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS 53 - Power</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 50px;
+            background: #f4f7fb;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            max-width: 450px;
+            margin: auto;
+            border-radius: 15px;
+        }
+
+        input, button {
+            padding: 12px;
+            margin: 8px;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 7px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h1>Power of a Number</h1>
+
+    <input type="number" id="base" placeholder="Base">
+    <input type="number" id="exponent" placeholder="Exponent">
+
+    <br>
+
+    <button onclick="calculatePower()">Calculate</button>
+
+    <p id="result"></p>
+</div>
+
+<script>
+function calculatePower() {
+    let base = Number(document.getElementById("base").value);
+    let exponent = Number(document.getElementById("exponent").value);
+
+    let result = Math.pow(base, exponent);
+
+    document.getElementById("result").textContent =
+        base + " ^ " + exponent + " = " + result;
+}
+</script>
+
+<br>
+
+<a href="../index.html">Home</a> |
+<a href="index.html">JavaScript Programs</a>
+
+</body>
+</html>

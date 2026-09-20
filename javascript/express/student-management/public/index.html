@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express Student Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main class="shell">
+        <header>
+            <p class="eyebrow">Express.js learning project</p>
+            <h1>Student Management API</h1>
+            <p>Explore routing, middleware, sessions, JWT authentication, roles, cookies, and SQLite CRUD from one small
+                interface.</p>
+        </header>
+
+        <section class="panel">
+            <h2>Authentication</h2>
+            <div class="grid two">
+                <form id="login-form">
+                    <h3>Login</h3>
+                    <input name="email" type="email" placeholder="Email" value="admin@example.com" required>
+                    <input name="password" type="password" placeholder="Password" value="Admin@123" required>
+                    <button>Login and get JWT</button>
+                </form>
+                <form id="register-form">
+                    <h3>Register</h3>
+                    <input name="name" placeholder="Name" required>
+                    <input name="email" type="email" placeholder="Email" required>
+                    <input name="password" type="password" placeholder="Password (6+ characters)" required>
+                    <button>Register user</button>
+                </form>
+            </div>
+            <p id="auth-status">Not authenticated.</p>
+        </section>
+
+        <section class="panel">
+            <div class="section-heading">
+                <h2>Students</h2><button id="load-students">Load students</button>
+            </div>
+            <form id="student-form" class="grid four">
+                <input name="name" placeholder="Name" required>
+                <input name="email" type="email" placeholder="Email" required>
+                <input name="course" placeholder="Course" required>
+                <input name="age" type="number" placeholder="Age" min="1" max="120" required>
+                <button>Add student</button>
+            </form>
+            <pre id="students-output">Login as the admin to manage students.</pre>
+        </section>
+
+        <section class="panel">
+            <h2>Cookie and session tools</h2>
+            <div class="actions"><button id="save-cookie">Save dark theme cookie</button><button id="read-cookie">Read
+                    cookie</button><button id="delete-cookie">Delete cookie</button><button id="logout">Logout
+                    session</button></div>
+            <pre id="cookie-output"></pre>
+        </section>
+
+        <section class="panel endpoints">
+            <h2>Available REST endpoints</h2>
+            <code>GET /api/students?search=web</code>
+            <code>POST /api/students</code>
+            <code>PUT /api/students/:id</code>
+            <code>DELETE /api/students/:id</code>
+            <code>GET|POST|PATCH|DELETE /api/products</code>
+            <code>GET /api/users</code> <span>admin only</span>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>

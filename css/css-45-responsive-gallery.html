@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS 45 - Responsive Gallery</title>
+<style>
+body{font-family:Arial;background:#f4f6f8;padding:30px}
+.container{max-width:1000px;margin:auto;background:white;padding:30px;border-radius:12px}
+h1{text-align:center}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.gallery img{width:100%;height:200px;object-fit:cover;border-radius:10px}
+.gallery img:hover{transform:scale(1.03)}
+.navigation{margin-top:30px;display:flex;justify-content:space-between}
+a{background:#333;color:white;padding:10px 15px;text-decoration:none;border-radius:5px}
+@media(max-width:800px){.gallery{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:500px){.gallery{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Responsive Image Gallery</h1>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=600&q=80">
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80">
+<img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=600&q=80">
+<img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=600&q=80">
+</div>
+<div class="navigation">
+<a href="css-44-object-fit.html">← Previous</a>
+<a href="index.html">CSS Programs</a>
+<a href="css-46-card-flexbox.html">Next →</a>
+</div>
+</div>
+</body>
+</html>   

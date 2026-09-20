@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Experiment 6 - Width, Height & Sizing</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #8e0e00, #c0392b);
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        header h1 {
+            font-size: 38px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 17px;
+        }
+
+        /* Main container */
+        .container {
+            max-width: 1000px;
+            margin: 35px auto;
+            padding: 0 20px;
+        }
+
+        .intro,
+        .box {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .intro {
+            margin-bottom: 25px;
+        }
+
+        .intro h2,
+        .box h2 {
+            color: #8e0e00;
+            margin-bottom: 10px;
+        }
+
+        /* Examples */
+        .examples {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .box h3 {
+            color: #8e0e00;
+            margin-bottom: 15px;
+        }
+
+        /* Fixed width */
+        .fixed-width {
+            width: 300px;
+            background: #f9d5d3;
+            border: 3px solid #c0392b;
+            padding: 20px;
+            text-align: center;
+            margin: auto;
+        }
+
+        /* Percentage width */
+        .percentage-width {
+            width: 80%;
+            background: #f9d5d3;
+            border: 3px solid #c0392b;
+            padding: 20px;
+            text-align: center;
+            margin: auto;
+        }
+
+        /* Full width */
+        .full-width {
+            width: 100%;
+            background: #f9d5d3;
+            border: 3px solid #c0392b;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Fixed height */
+        .fixed-height {
+            width: 100%;
+            height: 150px;
+            background: #f9d5d3;
+            border: 3px solid #c0392b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Min and max width */
+        .min-max {
+            min-width: 200px;
+            max-width: 400px;
+            background: #f9d5d3;
+            border: 3px solid #c0392b;
+            padding: 20px;
+            text-align: center;
+            margin: auto;
+        }
+
+        /* Min and max height */
+        .height-box {
+            min-height: 100px;
+            max-height: 180px;
+            overflow: auto;
+            background: #f9d5d3;
+            border: 3px solid #c0392b;
+            padding: 20px;
+        }
+
+        /* Viewport sizing */
+        .responsive-box {
+            width: 70vw;
+            min-height: 20vh;
+            background: #f9d5d3;
+            border: 3px solid #c0392b;
+            padding: 20px;
+            text-align: center;
+            margin: auto;
+        }
+
+        /* Navigation */
+        .navigation {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 35px 0;
+            flex-wrap: wrap;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            background: #8e0e00;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .navigation a:hover {
+            background: #c0392b;
+        }
+
+        /* Footer */
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* Responsive */
+        @media (max-width: 700px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            .examples {
+                grid-template-columns: 1fr;
+            }
+
+            .fixed-width {
+                width: 100%;
+            }
+
+            .responsive-box {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>CSS Experiment 6</h1>
+        <p>Width, Height & Sizing</p>
+    </header>
+
+    <main class="container">
+
+        <section class="intro">
+            <h2>Width, Height & Sizing</h2>
+
+            <p>
+                CSS width and height properties control the size of
+                HTML elements. Different units and sizing properties
+                can be used to create flexible and responsive layouts.
+            </p>
+        </section>
+
+        <section class="examples">
+
+            <!-- Fixed Width -->
+            <div class="box">
+                <h3>1. Fixed Width</h3>
+
+                <div class="fixed-width">
+                    Width: 300px
+                </div>
+
+                <p>
+                    The element has a fixed width of 300 pixels.
+                </p>
+            </div>
+
+            <!-- Percentage Width -->
+            <div class="box">
+                <h3>2. Percentage Width</h3>
+
+                <div class="percentage-width">
+                    Width: 80%
+                </div>
+
+                <p>
+                    Percentage width changes according to the
+                    size of its parent element.
+                </p>
+            </div>
+
+            <!-- Full Width -->
+            <div class="box">
+                <h3>3. Full Width</h3>
+
+                <div class="full-width">
+                    Width: 100%
+                </div>
+
+                <p>
+                    This element occupies the complete available width.
+                </p>
+            </div>
+
+            <!-- Fixed Height -->
+            <div class="box">
+                <h3>4. Fixed Height</h3>
+
+                <div class="fixed-height">
+                    Height: 150px
+                </div>
+
+                <p>
+                    The element has a fixed height of 150 pixels.
+                </p>
+            </div>
+
+            <!-- Min and Max Width -->
+            <div class="box">
+                <h3>5. Min & Max Width</h3>
+
+                <div class="min-max">
+                    Minimum width: 200px<br>
+                    Maximum width: 400px
+                </div>
+
+                <p>
+                    min-width and max-width restrict how small or
+                    large an element can become.
+                </p>
+            </div>
+
+            <!-- Min and Max Height -->
+            <div class="box">
+                <h3>6. Min & Max Height</h3>
+
+                <div class="height-box">
+                    This box has a minimum height of 100px and a
+                    maximum height of 180px. If the content becomes
+                    larger, scrolling is enabled using overflow.
+                </div>
+            </div>
+
+            <!-- Viewport Units -->
+            <div class="box">
+                <h3>7. Viewport Sizing</h3>
+
+                <div class="responsive-box">
+                    Width: 70vw<br>
+                    Minimum Height: 20vh
+                </div>
+
+                <p>
+                    vw represents viewport width and vh represents
+                    viewport height.
+                </p>
+            </div>
+
+        </section>
+
+        <!-- Summary -->
+        <section class="box" style="margin-top: 20px;">
+
+            <h2>Sizing Properties Used</h2>
+
+            <ul>
+                <li><strong>width</strong> - sets the width of an element.</li>
+                <li><strong>height</strong> - sets the height of an element.</li>
+                <li><strong>min-width</strong> - sets the minimum width.</li>
+                <li><strong>max-width</strong> - sets the maximum width.</li>
+                <li><strong>min-height</strong> - sets the minimum height.</li>
+                <li><strong>max-height</strong> - sets the maximum height.</li>
+                <li><strong>vw</strong> - viewport width unit.</li>
+                <li><strong>vh</strong> - viewport height unit.</li>
+            </ul>
+
+        </section>
+
+        <div class="navigation">
+            <a href="../index.html">← Home</a>
+            <a href="index.html">← Back to CSS Programs</a>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>CSS Practical Lab | Experiment 6</p>
+    </footer>
+
+</body>
+</html>

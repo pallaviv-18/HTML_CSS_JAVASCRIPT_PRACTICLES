@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Confirmation</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px;
+        }
+
+        form {
+            width: 350px;
+            max-width: 90%;
+            margin: auto;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="../../index.html">Home</a> |
+    <a href="../index.html">JavaScript Programs</a>
+
+    <h1>Signup Confirmation</h1>
+
+    <form id="signupForm">
+
+        <input type="text" id="name" placeholder="Name">
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+
+        <button type="submit">Sign Up</button>
+
+    </form>
+
+    <p id="message"></p>
+
+    <script>
+        document.getElementById("signupForm")
+            .addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+                const name =
+                    document.getElementById("name").value;
+
+                const email =
+                    document.getElementById("email").value;
+
+                const password =
+                    document.getElementById("password").value;
+
+                if (name === "" || email === "" || password === "") {
+                    document.getElementById("message").textContent =
+                        "Please fill all fields.";
+                    return;
+                }
+
+                const confirmed = confirm(
+                    "Do you want to create this account?"
+                );
+
+                if (confirmed) {
+                    document.getElementById("message").textContent =
+                        "Signup completed successfully!";
+                }
+            });
+    </script>
+
+</body>
+</html>

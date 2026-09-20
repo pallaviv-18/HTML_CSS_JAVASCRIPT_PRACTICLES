@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CSS 72 - Responsive Typography</title>
+<style>
+body{font-family:Arial;background:#f4f6f8;padding:30px}
+.container{max-width:900px;margin:auto;background:white;padding:30px;border-radius:12px}
+h1{font-size:clamp(28px,6vw,60px);text-align:center}
+p{font-size:clamp(16px,2vw,22px);line-height:1.6}
+.navigation{margin-top:30px;display:flex;justify-content:space-between}
+a{background:#333;color:white;padding:10px 15px;text-decoration:none;border-radius:5px}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Responsive Typography</h1>
+<p>
+The font size changes according to the screen size using the CSS
+clamp() function.
+</p>
+<div class="navigation">
+<a href="css-71-dark-mode.html">← Previous</a>
+<a href="index.html">CSS Programs</a>
+<a href="css-73-clamp-min-max.html">Next →</a>
+</div>
+</div>
+</body>
+</html>

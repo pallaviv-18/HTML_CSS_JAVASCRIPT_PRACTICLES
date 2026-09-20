@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Experiment 7 - Positioning</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #8e0e00, #c0392b);
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        header h1 {
+            font-size: 38px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 17px;
+        }
+
+        /* Main */
+        .container {
+            max-width: 1000px;
+            margin: 35px auto;
+            padding: 0 20px;
+        }
+
+        .intro,
+        .box {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .intro {
+            margin-bottom: 25px;
+        }
+
+        .intro h2,
+        .box h2 {
+            color: #8e0e00;
+            margin-bottom: 10px;
+        }
+
+        /* Example heading */
+        .box h3 {
+            color: #8e0e00;
+            margin-bottom: 15px;
+        }
+
+        /* 1. Static Position */
+        .static-container {
+            background: #eee;
+            padding: 15px;
+            border: 2px dashed #aaa;
+        }
+
+        .static-box {
+            position: static;
+            background: #f9d5d3;
+            border: 3px solid #c0392b;
+            padding: 15px;
+            text-align: center;
+        }
+
+        /* 2. Relative Position */
+        .relative-container {
+            background: #eee;
+            padding: 20px;
+            height: 180px;
+            border: 2px dashed #aaa;
+        }
+
+        .relative-box {
+            position: relative;
+            left: 40px;
+            top: 25px;
+            width: 220px;
+            background: #f9d5d3;
+            border: 3px solid #c0392b;
+            padding: 15px;
+            text-align: center;
+        }
+
+        /* 3. Absolute Position */
+        .absolute-container {
+            position: relative;
+            height: 220px;
+            background: #eee;
+            border: 2px dashed #aaa;
+        }
+
+        .absolute-box {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            background: #f9d5d3;
+            border: 3px solid #c0392b;
+            padding: 15px;
+            width: 230px;
+            text-align: center;
+        }
+
+        /* 4. Fixed Position */
+        .fixed-demo {
+            background: #f9d5d3;
+            border: 3px solid #c0392b;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .fixed-note {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background: #8e0e00;
+            color: white;
+            padding: 12px 18px;
+            border-radius: 8px;
+            font-weight: bold;
+            z-index: 100;
+        }
+
+        /* 5. Sticky Position */
+        .sticky-container {
+            height: 250px;
+            overflow-y: auto;
+            background: #eee;
+            border: 2px solid #ccc;
+        }
+
+        .sticky-box {
+            position: sticky;
+            top: 0;
+            background: #8e0e00;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            z-index: 5;
+        }
+
+        .sticky-content {
+            padding: 20px;
+        }
+
+        .sticky-content p {
+            margin-bottom: 25px;
+        }
+
+        /* Comparison table */
+        .table-wrapper {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+
+        th {
+            background: #8e0e00;
+            color: white;
+        }
+
+        /* Navigation */
+        .navigation {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 35px 0;
+            flex-wrap: wrap;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            background: #8e0e00;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .navigation a:hover {
+            background: #c0392b;
+        }
+
+        /* Footer */
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* Responsive */
+        @media (max-width: 700px) {
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            .relative-box {
+                width: 190px;
+                left: 20px;
+            }
+
+            .absolute-box {
+                width: 190px;
+                right: 10px;
+                bottom: 10px;
+            }
+
+            .fixed-note {
+                right: 10px;
+                bottom: 10px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>CSS Experiment 7</h1>
+        <p>CSS Positioning</p>
+    </header>
+
+    <main class="container">
+
+        <section class="intro">
+            <h2>CSS Positioning</h2>
+
+            <p>
+                The CSS position property controls how an element
+                is placed on a webpage. This experiment demonstrates
+                static, relative, absolute, fixed and sticky positioning.
+            </p>
+        </section>
+
+        <!-- Static -->
+        <section class="box" style="margin-bottom: 20px;">
+
+            <h3>1. Static Position</h3>
+
+            <div class="static-container">
+                <div class="static-box">
+                    position: static
+                </div>
+            </div>
+
+            <p style="margin-top: 15px;">
+                Static is the default position of an HTML element.
+                The element follows the normal document flow.
+            </p>
+
+        </section>
+
+        <!-- Relative -->
+        <section class="box" style="margin-bottom: 20px;">
+
+            <h3>2. Relative Position</h3>
+
+            <div class="relative-container">
+
+                <div class="relative-box">
+                    position: relative
+                </div>
+
+            </div>
+
+            <p style="margin-top: 15px;">
+                A relative element remains in the normal document flow,
+                but can be moved using top, bottom, left or right.
+            </p>
+
+        </section>
+
+        <!-- Absolute -->
+        <section class="box" style="margin-bottom: 20px;">
+
+            <h3>3. Absolute Position</h3>
+
+            <div class="absolute-container">
+
+                <div class="absolute-box">
+                    position: absolute
+                </div>
+
+            </div>
+
+            <p style="margin-top: 15px;">
+                An absolutely positioned element is positioned relative
+                to its nearest positioned ancestor.
+            </p>
+
+        </section>
+
+        <!-- Fixed -->
+        <section class="box" style="margin-bottom: 20px;">
+
+            <h3>4. Fixed Position</h3>
+
+            <div class="fixed-demo">
+                Scroll the page and notice the fixed message
+                at the bottom-right corner.
+            </div>
+
+            <p style="margin-top: 15px;">
+                A fixed element stays in the same position relative
+                to the browser window even when the page is scrolled.
+            </p>
+
+        </section>
+
+        <!-- Sticky -->
+        <section class="box" style="margin-bottom: 20px;">
+
+            <h3>5. Sticky Position</h3>
+
+            <div class="sticky-container">
+
+                <div class="sticky-box">
+                    Sticky Heading
+                </div>
+
+                <div class="sticky-content">
+
+                    <p>
+                        Scroll inside this box to see the sticky
+                        heading remain at the top.
+                    </p>
+
+                    <p>
+                        Sticky positioning behaves like relative
+                        positioning until a specified scrolling
+                        position is reached.
+                    </p>
+
+                    <p>
+                        After reaching the top position, the element
+                        remains visible while its container is scrolling.
+                    </p>
+
+                    <p>
+                        This technique is commonly used for navigation
+                        headers and section headings.
+                    </p>
+
+                    <p>
+                        Continue scrolling to observe the sticky effect.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Comparison -->
+        <section class="box">
+
+            <h2>Position Property Comparison</h2>
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <tr>
+                        <th>Position</th>
+                        <th>Description</th>
+                    </tr>
+
+                    <tr>
+                        <td>Static</td>
+                        <td>Default position and follows normal flow.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Relative</td>
+                        <td>Moves relative to its normal position.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Absolute</td>
+                        <td>Positioned relative to a positioned ancestor.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Fixed</td>
+                        <td>Remains fixed relative to the browser window.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Sticky</td>
+                        <td>Sticks to a specified position during scrolling.</td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <!-- Navigation -->
+        <div class="navigation">
+            <a href="../index.html">← Home</a>
+            <a href="index.html">← Back to CSS Programs</a>
+        </div>
+
+    </main>
+
+    <!-- Fixed demonstration -->
+    <div class="fixed-note">
+        Fixed Element
+    </div>
+
+    <footer>
+        <p>CSS Practical Lab | Experiment 7</p>
+    </footer>
+
+</body>
+</html>

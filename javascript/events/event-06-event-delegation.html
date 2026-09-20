@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 30px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            width: 250px;
+            margin: 10px auto;
+            padding: 15px;
+            background-color: lightblue;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="../../index.html">Home</a> |
+    <a href="../index.html">JavaScript Programs</a>
+
+    <h1>Event Delegation</h1>
+
+    <ul id="studentList">
+        <li>Pallavi</li>
+        <li>Rahul</li>
+        <li>Ananya</li>
+        <li>Priya</li>
+    </ul>
+
+    <p id="result">Click a student.</p>
+
+    <script>
+        document.getElementById("studentList").addEventListener("click", function(event) {
+
+            if (event.target.tagName === "LI") {
+                document.getElementById("result").textContent =
+                    "You selected: " + event.target.textContent;
+            }
+
+        });
+    </script>
+
+</body>
+</html>

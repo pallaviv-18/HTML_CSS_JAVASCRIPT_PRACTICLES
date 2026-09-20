@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 10 - Reverse Number</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            background: white;
+            padding: 35px;
+            max-width: 450px;
+            margin: auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        input {
+            padding: 12px;
+            width: 80%;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 12px 25px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Reverse a Number</h1>
+
+    <input type="number" id="number" placeholder="Enter a number">
+
+    <br>
+
+    <button onclick="reverseNumber()">Reverse</button>
+
+    <div id="result"></div>
+</div>
+
+<script>
+    function reverseNumber() {
+        let number = document.getElementById("number").value;
+
+        if (number === "") {
+            document.getElementById("result").textContent =
+                "Please enter a number.";
+            return;
+        }
+
+        let reversed = number.split("").reverse().join("");
+
+        document.getElementById("result").textContent =
+            "Reversed Number: " + reversed;
+    }
+</script>
+
+<br>
+
+<a href="../index.html">Home</a> |
+<a href="index.html">JavaScript Programs</a>
+</body>
+</html>

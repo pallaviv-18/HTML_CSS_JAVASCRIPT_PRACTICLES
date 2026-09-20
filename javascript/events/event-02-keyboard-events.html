@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Events</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 30px;
+        }
+
+        input {
+            padding: 12px;
+            width: 300px;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="../../index.html">Home</a> |
+    <a href="../index.html">JavaScript Programs</a>
+
+    <h1>Keyboard Events</h1>
+
+    <input type="text" id="keyboardInput" placeholder="Press any key">
+
+    <p id="result">Press a key...</p>
+
+    <script>
+        const input = document.getElementById("keyboardInput");
+        const result = document.getElementById("result");
+
+        input.addEventListener("keydown", function(event) {
+            result.textContent = "Key pressed: " + event.key;
+        });
+
+        input.addEventListener("keyup", function(event) {
+            console.log("Key released:", event.key);
+        });
+    </script>
+
+</body>
+</html>

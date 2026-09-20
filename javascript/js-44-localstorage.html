@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head><title>JS 44 - Local Storage</title></head>
+<body style="font-family:Arial;text-align:center;padding:40px">
+
+<h1>Local Storage</h1>
+
+<input id="name" placeholder="Enter name">
+<button onclick="save()">Save</button>
+<button onclick="load()">Load</button>
+<button onclick="removeData()">Remove</button>
+
+<p id="result"></p>
+
+<script>
+function save(){
+    localStorage.setItem("studentName",document.getElementById("name").value);
+    document.getElementById("result").textContent="Saved!";
+}
+
+function load(){
+    document.getElementById("result").textContent=
+        localStorage.getItem("studentName") || "No data found.";
+}
+
+function removeData(){
+    localStorage.removeItem("studentName");
+    document.getElementById("result").textContent="Data removed.";
+}
+</script>
+
+<br>
+<a href="../index.html">Home</a> | <a href="index.html">JavaScript Programs</a>
+</body>
+</html>

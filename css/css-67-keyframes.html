@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CSS 67 - Keyframes</title>
+<style>
+body{font-family:Arial;background:#f4f6f8;padding:30px;text-align:center}
+.box{width:120px;height:120px;background:#3498db;margin:80px auto;animation:move 3s infinite alternate}
+@keyframes move{
+0%{transform:translateX(-150px);border-radius:0}
+50%{transform:translateX(0);border-radius:50%}
+100%{transform:translateX(150px);border-radius:0}
+}
+.navigation{display:flex;justify-content:space-between}
+a{background:#333;color:white;padding:10px 15px;text-decoration:none;border-radius:5px}
+</style>
+</head>
+<body>
+<h1>CSS Keyframes Animation</h1>
+<div class="box"></div>
+<div class="navigation">
+<a href="css-66-2d-3d-transforms.html">← Previous</a>
+<a href="index.html">CSS Programs</a>
+<a href="css-68-spinner.html">Next →</a>
+</div>
+</body>
+</html>

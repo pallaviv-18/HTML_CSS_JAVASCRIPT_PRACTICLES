@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Experiment 10 - College Timetable</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #b31217, #e52d27);
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .title {
+            text-align: center;
+            color: #b31217;
+            margin-bottom: 25px;
+        }
+
+        .college-name {
+            text-align: center;
+            margin-bottom: 5px;
+            font-size: 24px;
+        }
+
+        .class-name {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #666;
+        }
+
+        .table-container {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 800px;
+        }
+
+        th,
+        td {
+            border: 1px solid #999;
+            padding: 14px 10px;
+            text-align: center;
+        }
+
+        th {
+            background: #b31217;
+            color: white;
+        }
+
+        .time {
+            background: #f1f1f1;
+            font-weight: bold;
+        }
+
+        .break {
+            background: #ffe0e0;
+            font-weight: bold;
+            color: #b31217;
+        }
+
+        td:hover {
+            background: #f8eeee;
+        }
+
+        .navigation {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .navigation a {
+            display: inline-block;
+            text-decoration: none;
+            background: #333;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 8px;
+            margin: 5px;
+        }
+
+        .navigation a:hover {
+            background: #b31217;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 20px;
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 25px;
+            }
+
+            th,
+            td {
+                padding: 10px 8px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>College Timetable</h1>
+        <p>Experiment 10 - HTML Table</p>
+    </header>
+
+    <div class="container">
+
+        <h2 class="college-name">Sai University</h2>
+        <p class="class-name">B.Tech - II Year</p>
+
+        <h2 class="title">Weekly Timetable</h2>
+
+        <div class="table-container">
+
+            <table>
+
+                <tr>
+                    <th>Time</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                </tr>
+
+                <tr>
+                    <td class="time">9:00 - 10:00</td>
+                    <td>Data Structures</td>
+                    <td>Mathematics</td>
+                    <td>Python</td>
+                    <td>Web Development</td>
+                    <td>Data Structures</td>
+                </tr>
+
+                <tr>
+                    <td class="time">10:00 - 11:00</td>
+                    <td>Python</td>
+                    <td>Data Structures</td>
+                    <td>Mathematics</td>
+                    <td>Python</td>
+                    <td>Web Development</td>
+                </tr>
+
+                <tr>
+                    <td class="time">11:00 - 11:15</td>
+                    <td colspan="5" class="break">SHORT BREAK</td>
+                </tr>
+
+                <tr>
+                    <td class="time">11:15 - 12:15</td>
+                    <td>Web Development</td>
+                    <td>JavaScript</td>
+                    <td>Data Structures</td>
+                    <td>Mathematics</td>
+                    <td>Python</td>
+                </tr>
+
+                <tr>
+                    <td class="time">12:15 - 1:15</td>
+                    <td>Mathematics</td>
+                    <td>Web Development</td>
+                    <td>JavaScript</td>
+                    <td>Data Structures</td>
+                    <td>Mathematics</td>
+                </tr>
+
+                <tr>
+                    <td class="time">1:15 - 2:00</td>
+                    <td colspan="5" class="break">LUNCH BREAK</td>
+                </tr>
+
+                <tr>
+                    <td class="time">2:00 - 3:00</td>
+                    <td>JavaScript Lab</td>
+                    <td>Python Lab</td>
+                    <td>Web Development Lab</td>
+                    <td>Data Structures Lab</td>
+                    <td>Project Work</td>
+                </tr>
+
+                <tr>
+                    <td class="time">3:00 - 4:00</td>
+                    <td>JavaScript Lab</td>
+                    <td>Python Lab</td>
+                    <td>Web Development Lab</td>
+                    <td>Data Structures Lab</td>
+                    <td>Project Work</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+        <div class="navigation">
+            <a href="../index.html">Home</a>
+            <a href="index.html">Back to Programs</a>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>HTML Practical Lab | Experiment 10</p>
+    </footer>
+
+</body>
+</html>

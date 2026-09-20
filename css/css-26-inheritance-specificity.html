@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Inheritance and Specificity</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            color: #333;
+        }
+
+        header {
+            background: #1e3a8a;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .box {
+            background: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .box h2 {
+            color: #1e3a8a;
+            margin-bottom: 15px;
+        }
+
+        /* Inheritance Example */
+
+        .parent {
+            color: #7c3aed;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .parent p {
+            font-size: 16px;
+        }
+
+        .parent span {
+            color: inherit;
+        }
+
+        /* Specificity Example */
+
+        p {
+            color: black;
+        }
+
+        .specific-text {
+            color: green;
+        }
+
+        #special-text {
+            color: red;
+        }
+
+        /* ID selector has higher specificity
+           than class and element selectors */
+
+        .important {
+            color: blue !important;
+        }
+
+        .comparison {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .example {
+            background: #eef2ff;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .example h3 {
+            margin-bottom: 8px;
+            color: #1e3a8a;
+        }
+
+        .navigation {
+            text-align: center;
+            margin: 25px;
+        }
+
+        .navigation a {
+            display: inline-block;
+            text-decoration: none;
+            background: #1e3a8a;
+            color: white;
+            padding: 10px 18px;
+            margin: 5px;
+            border-radius: 6px;
+        }
+
+        .navigation a:hover {
+            background: #2563eb;
+        }
+
+        @media (max-width: 650px) {
+            .comparison {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>CSS Inheritance and Specificity</h1>
+        <p>Understanding how CSS rules are applied</p>
+    </header>
+
+    <div class="container">
+
+        <!-- Inheritance -->
+        <div class="box">
+
+            <h2>1. CSS Inheritance</h2>
+
+            <div class="parent">
+                This text gets its color from the parent.
+
+                <p>
+                    This paragraph inherits the font family from
+                    the parent, but its font size is changed.
+                </p>
+
+                <span>
+                    This span explicitly inherits the parent's color.
+                </span>
+            </div>
+
+        </div>
+
+        <!-- Specificity -->
+        <div class="box">
+
+            <h2>2. CSS Specificity</h2>
+
+            <p>
+                Element selector
+            </p>
+
+            <p class="specific-text">
+                Class selector
+            </p>
+
+            <p id="special-text">
+                ID selector
+            </p>
+
+            <p class="important">
+                !important rule
+            </p>
+
+        </div>
+
+        <!-- Comparison -->
+        <div class="box">
+
+            <h2>Specificity Comparison</h2>
+
+            <div class="comparison">
+
+                <div class="example">
+                    <h3>Element Selector</h3>
+                    <p>Example: p { color: black; }</p>
+                </div>
+
+                <div class="example">
+                    <h3>Class Selector</h3>
+                    <p>Example: .text { color: green; }</p>
+                </div>
+
+                <div class="example">
+                    <h3>ID Selector</h3>
+                    <p>Example: #text { color: red; }</p>
+                </div>
+
+                <div class="example">
+                    <h3>Important</h3>
+                    <p>Example: color: blue !important;</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="navigation">
+            <a href="../index.html">Home</a>
+            <a href="index.html">Back to CSS Programs</a>
+        </div>
+
+    </div>
+
+</body>
+</html>

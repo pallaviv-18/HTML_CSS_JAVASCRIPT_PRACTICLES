@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Experiment 3 - Colors, Backgrounds & Borders</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Background */
+        header {
+            background: linear-gradient(135deg, #b31217, #e52d27);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            margin-bottom: 8px;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .title {
+            text-align: center;
+            color: #b31217;
+            margin-bottom: 30px;
+        }
+
+        /* Color Examples */
+        .color-section {
+            margin-bottom: 30px;
+        }
+
+        .color-boxes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .color-box {
+            padding: 30px 15px;
+            text-align: center;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .red {
+            background-color: #b31217;
+            color: white;
+        }
+
+        .light-red {
+            background-color: #fff0f0;
+            color: #b31217;
+        }
+
+        .dark {
+            background-color: #333;
+            color: white;
+        }
+
+        /* Background Example */
+        .background-box {
+            margin-top: 15px;
+            padding: 40px 20px;
+            text-align: center;
+
+            background: linear-gradient(
+                135deg,
+                #b31217,
+                #e52d27
+            );
+
+            color: white;
+            border-radius: 12px;
+        }
+
+        /* Border Examples */
+        .border-section {
+            margin-top: 30px;
+        }
+
+        .border-boxes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .border-box {
+            padding: 25px;
+            text-align: center;
+            background-color: #fafafa;
+        }
+
+        .solid-border {
+            border: 3px solid #b31217;
+        }
+
+        .dashed-border {
+            border: 3px dashed #b31217;
+        }
+
+        .dotted-border {
+            border: 3px dotted #b31217;
+        }
+
+        /* Combined Example */
+        .combined-box {
+            margin-top: 30px;
+            padding: 30px;
+
+            background-color: #fff0f0;
+            color: #b31217;
+
+            border: 4px solid #b31217;
+            border-radius: 15px;
+
+            text-align: center;
+        }
+
+        /* Navigation */
+        .navigation {
+            text-align: center;
+            margin-top: 35px;
+        }
+
+        .navigation a {
+            display: inline-block;
+            text-decoration: none;
+
+            background-color: #333;
+            color: white;
+
+            padding: 10px 18px;
+            margin: 5px;
+
+            border-radius: 8px;
+        }
+
+        .navigation a:hover {
+            background-color: #b31217;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+
+        /* Responsive */
+        @media (max-width: 700px) {
+
+            .container {
+                margin: 20px;
+                padding: 20px;
+            }
+
+            .color-boxes,
+            .border-boxes {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 26px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <h1>Colors, Backgrounds & Borders</h1>
+
+        <p>
+            CSS Experiment 3
+        </p>
+
+    </header>
+
+
+    <div class="container">
+
+        <h2 class="title">
+            CSS Styling Demonstration
+        </h2>
+
+
+        <!-- Colors -->
+        <div class="color-section">
+
+            <h2>1. Colors</h2>
+
+            <p>
+                CSS allows us to change the text color and
+                background color of HTML elements.
+            </p>
+
+            <div class="color-boxes">
+
+                <div class="color-box red">
+                    Red Background
+                </div>
+
+                <div class="color-box light-red">
+                    Light Background
+                </div>
+
+                <div class="color-box dark">
+                    Dark Background
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Background -->
+        <div>
+
+            <h2>2. Backgrounds</h2>
+
+            <p>
+                Backgrounds can use solid colors or gradients.
+            </p>
+
+            <div class="background-box">
+
+                <h3>Gradient Background</h3>
+
+                <p>
+                    This box demonstrates a CSS gradient background.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Borders -->
+        <div class="border-section">
+
+            <h2>3. Borders</h2>
+
+            <p>
+                CSS provides different border styles such as
+                solid, dashed and dotted.
+            </p>
+
+            <div class="border-boxes">
+
+                <div class="border-box solid-border">
+                    Solid Border
+                </div>
+
+                <div class="border-box dashed-border">
+                    Dashed Border
+                </div>
+
+                <div class="border-box dotted-border">
+                    Dotted Border
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Combined -->
+        <div class="combined-box">
+
+            <h2>Combined Styling</h2>
+
+            <p>
+                This example combines colors, background,
+                border and border-radius properties.
+            </p>
+
+        </div>
+
+
+        <!-- Navigation -->
+        <div class="navigation">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="index.html">
+                Back to Programs
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+
+        <p>
+            CSS Practical Lab | Experiment 3
+        </p>
+
+    </footer>
+
+</body>
+</html>

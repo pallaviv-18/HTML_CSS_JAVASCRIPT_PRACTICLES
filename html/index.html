@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>HTML Programs | Practical Lab</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f5f7fb;
+        color: #1f2937;
+        min-height: 100vh;
+    }
+
+    /* Header */
+
+    header {
+        background: linear-gradient(135deg, #111827, #b91c1c);
+        color: white;
+        padding: 55px 20px;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 42px;
+        margin-bottom: 12px;
+    }
+
+    header p {
+        color: #fee2e2;
+        font-size: 17px;
+    }
+
+    .back-home {
+        display: inline-block;
+        margin-top: 25px;
+        padding: 10px 20px;
+        background: rgba(255, 255, 255, 0.15);
+        color: white;
+        text-decoration: none;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-radius: 8px;
+        transition: 0.3s;
+    }
+
+    .back-home:hover {
+        background: white;
+        color: #b91c1c;
+    }
+
+    /* Main */
+
+    main {
+        width: 90%;
+        max-width: 1100px;
+        margin: 50px auto;
+    }
+
+    .intro {
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+    .intro h2 {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .intro p {
+        color: #6b7280;
+    }
+
+    /* Program List */
+
+    .program-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+    .program-card {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+
+        background: white;
+        padding: 22px;
+
+        border-radius: 15px;
+        border: 1px solid #e5e7eb;
+
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+
+        text-decoration: none;
+        color: #1f2937;
+
+        transition: 0.3s;
+    }
+
+    .program-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+        border-color: #ef4444;
+    }
+
+    .number {
+        min-width: 48px;
+        height: 48px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 12px;
+
+        background: #fee2e2;
+        color: #b91c1c;
+
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .program-info h3 {
+        font-size: 17px;
+        margin-bottom: 5px;
+    }
+
+    .program-info p {
+        color: #6b7280;
+        font-size: 13px;
+    }
+
+    /* Footer */
+
+    footer {
+        background: #111827;
+        color: #d1d5db;
+        text-align: center;
+        padding: 25px;
+        margin-top: 70px;
+        font-size: 14px;
+    }
+
+    /* Responsive */
+
+    @media (max-width: 750px) {
+        .program-list {
+            grid-template-columns: 1fr;
+        }
+
+        header h1 {
+            font-size: 32px;
+        }
+    }
+
+    @media (max-width: 500px) {
+        main {
+            width: 92%;
+        }
+
+        .program-card {
+            padding: 18px;
+        }
+
+        .program-info h3 {
+            font-size: 15px;
+        }
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<!-- Header -->
+
+<header>
+
+    <h1>HTML Programs</h1>
+
+    <p>
+        HTML Practical Experiments
+    </p>
+
+    <a href="../index.html" class="back-home">
+        ← Back to Home
+    </a>
+
+</header>
+
+
+<!-- Main Content -->
+
+<main>
+
+    <div class="intro">
+
+        <h2>HTML Practical Programs</h2>
+
+        <p>
+            Select an experiment below to open the working program.
+        </p>
+
+    </div>
+
+
+    <div class="program-list">
+
+        <!-- 01 -->
+
+        <a href="html-01-basic.html" class="program-card">
+
+            <div class="number">01</div>
+
+            <div class="program-info">
+
+                <h3>
+                    Basic HTML Webpage
+                </h3>
+
+                <p>
+                    Headings, paragraphs and line breaks
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <!-- 02 -->
+
+        <a href="html-02-lists.html" class="program-card">
+
+            <div class="number">02</div>
+
+            <div class="program-info">
+
+                <h3>
+                    HTML Lists
+                </h3>
+
+                <p>
+                    Ordered, unordered and description lists
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <!-- 03 -->
+
+        <a href="html-03-tables.html" class="program-card">
+
+            <div class="number">03</div>
+
+            <div class="program-info">
+
+                <h3>
+                    HTML Tables
+                </h3>
+
+                <p>
+                    Rows, columns, borders and merged cells
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <!-- 04 -->
+
+        <a href="html-04-images-links.html" class="program-card">
+
+            <div class="number">04</div>
+
+            <div class="program-info">
+
+                <h3>
+                    Images and Hyperlinks
+                </h3>
+
+                <p>
+                    Images and clickable hyperlinks
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <!-- 05 -->
+
+        <a href="html-05-registration-form.html" class="program-card">
+
+            <div class="number">05</div>
+
+            <div class="program-info">
+
+                <h3>
+                    Student Registration Form
+                </h3>
+
+                <p>
+                    HTML form elements
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <!-- 06 -->
+
+        <a href="html-06-audio-video.html" class="program-card">
+
+            <div class="number">06</div>
+
+            <div class="program-info">
+
+                <h3>
+                    Audio and Video
+                </h3>
+
+                <p>
+                    HTML audio and video elements
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <!-- 07 -->
+
+        <a href="html-07-iframe.html" class="program-card">
+
+            <div class="number">07</div>
+
+            <div class="program-info">
+
+                <h3>
+                    Frames / Iframes
+                </h3>
+
+                <p>
+                    Embedding content using iframe
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <!-- 08 -->
+
+        <a href="html-08-semantic-elements.html" class="program-card">
+
+            <div class="number">08</div>
+
+            <div class="program-info">
+
+                <h3>
+                    Semantic HTML Elements
+                </h3>
+
+                <p>
+                    Header, nav, section, article and footer
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <!-- 09 -->
+
+        <a href="html-09-input-types.html" class="program-card">
+
+            <div class="number">09</div>
+
+            <div class="program-info">
+
+                <h3>
+                    HTML5 Input Types
+                </h3>
+
+                <p>
+                    Email, date, number and password
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <!-- 10 -->
+
+        <a href="html-10-timetable.html" class="program-card">
+
+            <div class="number">10</div>
+
+            <div class="program-info">
+
+                <h3>
+                    College Timetable
+                </h3>
+
+                <p>
+                    Timetable using HTML tables
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <!-- 11 -->
+
+        <a href="html-11-css-styling.html" class="program-card">
+
+            <div class="number">11</div>
+
+            <div class="program-info">
+
+                <h3>
+                    Internal and External CSS
+                </h3>
+
+                <p>
+                    CSS styling methods
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <!-- 12 -->
+
+        <a href="html-12-css-selectors.html" class="program-card">
+
+            <div class="number">12</div>
+
+            <div class="program-info">
+
+                <h3>
+                    CSS Selectors
+                </h3>
+
+                <p>
+                    Demonstrating different CSS selectors
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <!-- 13 -->
+
+        <a href="html-13-responsive.html" class="program-card">
+
+            <div class="number">13</div>
+
+            <div class="program-info">
+
+                <h3>
+                    Responsive Webpage
+                </h3>
+
+                <p>
+                    Responsive design using CSS
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <!-- 14 -->
+
+        <a href="html-14-bootstrap.html" class="program-card">
+
+            <div class="number">14</div>
+
+            <div class="program-info">
+
+                <h3>
+                    Bootstrap Components
+                </h3>
+
+                <p>
+                    Webpage using Bootstrap components
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <!-- 15 -->
+
+        <a href="html-15-portfolio.html" class="program-card">
+
+            <div class="number">15</div>
+
+            <div class="program-info">
+
+                <h3>
+                    Personal Portfolio
+                </h3>
+
+                <p>
+                    Personal portfolio using HTML and CSS
+                </p>
+
+            </div>
+
+        </a>
+
+    </div>
+
+</main>
+
+
+<!-- Footer -->
+
+<footer>
+
+    <p>
+        HTML • CSS • JavaScript Practical Programs
+    </p>
+
+</footer>
+```
+
+</body>
+</html>

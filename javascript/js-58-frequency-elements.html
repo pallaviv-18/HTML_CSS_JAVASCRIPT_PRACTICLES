@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS 58 - Frequency of Elements</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 40px;
+            background: #f4f7fb;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            max-width: 500px;
+            margin: auto;
+            border-radius: 15px;
+        }
+
+        input, button {
+            padding: 12px;
+            margin: 8px;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 7px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h1>Frequency of Elements</h1>
+
+    <input id="arr" placeholder="1,2,2,3,3,3">
+
+    <br>
+
+    <button onclick="findFrequency()">Find Frequency</button>
+
+    <p id="result"></p>
+</div>
+
+<script>
+function findFrequency() {
+    let arr = document.getElementById("arr")
+        .value.split(",")
+        .map(x => x.trim());
+
+    let frequency = {};
+
+    arr.forEach(function(item) {
+        frequency[item] = (frequency[item] || 0) + 1;
+    });
+
+    let output = "";
+
+    for (let item in frequency) {
+        output += item + " : " + frequency[item] + "<br>";
+    }
+
+    document.getElementById("result").innerHTML = output;
+}
+</script>
+
+<br>
+
+<a href="../index.html">Home</a> |
+<a href="index.html">JavaScript Programs</a>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+    "name": "nodejs-server-side-architecture",
+    "version": "1.0.0",
+    "description": "Node.js fundamentals: HTTP, modules, file system, npm, and asynchronous programming.",
+    "main": "server.js",
+    "type": "commonjs",
+    "scripts": {
+        "start": "node server.js",
+        "demo": "node demos.js"
+    },
+    "dependencies": {
+        "chalk": "^4.1.2"
+    }
+}

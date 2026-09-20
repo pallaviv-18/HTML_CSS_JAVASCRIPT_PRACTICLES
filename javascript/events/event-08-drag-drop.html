@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 30px;
+        }
+
+        #dragItem {
+            width: 120px;
+            padding: 20px;
+            margin: 30px auto;
+            background-color: lightblue;
+            cursor: grab;
+        }
+
+        #dropZone {
+            width: 300px;
+            height: 150px;
+            margin: 30px auto;
+            border: 3px dashed #555;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="../../index.html">Home</a> |
+    <a href="../index.html">JavaScript Programs</a>
+
+    <h1>Drag and Drop</h1>
+
+    <div id="dragItem" draggable="true">
+        Drag Me
+    </div>
+
+    <div id="dropZone">
+        Drop Here
+    </div>
+
+    <p id="result"></p>
+
+    <script>
+        const dragItem = document.getElementById("dragItem");
+        const dropZone = document.getElementById("dropZone");
+        const result = document.getElementById("result");
+
+        dragItem.addEventListener("dragstart", function(event) {
+            event.dataTransfer.setData("text", event.target.id);
+        });
+
+        dropZone.addEventListener("dragover", function(event) {
+            event.preventDefault();
+        });
+
+        dropZone.addEventListener("drop", function(event) {
+            event.preventDefault();
+
+            const itemId = event.dataTransfer.getData("text");
+            const item = document.getElementById(itemId);
+
+            dropZone.appendChild(item);
+
+            result.textContent = "Item dropped successfully!";
+        });
+    </script>
+
+</body>
+</html>

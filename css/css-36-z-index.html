@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS 36 - Z-Index</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .description {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        /* Z-Index demonstration area */
+        .zindex-area {
+            position: relative;
+            height: 350px;
+            background: #eeeeee;
+            border: 2px solid #333;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .box {
+            width: 220px;
+            height: 150px;
+            position: absolute;
+            padding: 20px;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .box1 {
+            background: #3498db;
+            top: 40px;
+            left: 100px;
+            z-index: 1;
+        }
+
+        .box2 {
+            background: #e74c3c;
+            top: 100px;
+            left: 180px;
+            z-index: 3;
+        }
+
+        .box3 {
+            background: #27ae60;
+            top: 160px;
+            left: 260px;
+            z-index: 2;
+        }
+
+        .explanation {
+            margin-top: 25px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-left: 5px solid #333;
+            border-radius: 5px;
+        }
+
+        .explanation h2 {
+            margin-bottom: 10px;
+        }
+
+        .explanation p {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .navigation {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            background: #333;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 6px;
+        }
+
+        .navigation a:hover {
+            background: #555;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            .zindex-area {
+                height: 400px;
+            }
+
+            .box {
+                width: 160px;
+                height: 120px;
+                font-size: 16px;
+            }
+
+            .box1 {
+                left: 20px;
+                top: 30px;
+            }
+
+            .box2 {
+                left: 70px;
+                top: 100px;
+            }
+
+            .box3 {
+                left: 120px;
+                top: 170px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>CSS Experiment 36 - Z-Index</h1>
+
+        <p class="description">
+            Demonstration of the CSS z-index property for controlling
+            the stacking order of positioned elements.
+        </p>
+
+        <div class="zindex-area">
+
+            <div class="box box1">
+                Box 1<br>
+                z-index: 1
+            </div>
+
+            <div class="box box2">
+                Box 2<br>
+                z-index: 3
+            </div>
+
+            <div class="box box3">
+                Box 3<br>
+                z-index: 2
+            </div>
+
+        </div>
+
+        <div class="explanation">
+
+            <h2>About z-index</h2>
+
+            <p>
+                The <strong>z-index</strong> property controls the stacking
+                order of positioned elements.
+            </p>
+
+            <p>
+                An element with a higher z-index appears in front of an
+                element with a lower z-index.
+            </p>
+
+            <p>
+                In this example, Box 2 has the highest z-index value
+                (3), so it appears above Box 1 and Box 3.
+            </p>
+
+        </div>
+
+        <div class="navigation">
+            <a href="css-35-overflow.html">← Previous</a>
+            <a href="index.html">CSS Programs</a>
+            <a href="css-37-display.html">Next →</a>
+        </div>
+
+    </div>
+
+</body>
+</html>

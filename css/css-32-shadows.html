@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Shadows</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1e293b;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .normal {
+            box-shadow: 0 4px 10px #bbb;
+        }
+
+        .large {
+            box-shadow: 0 10px 25px #999;
+        }
+
+        .soft {
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>CSS Shadow Effects</h1>
+
+<div class="container">
+
+    <div class="card normal">
+        <h2>Normal Shadow</h2>
+        <p>Simple box shadow.</p>
+    </div>
+
+    <div class="card large">
+        <h2>Large Shadow</h2>
+        <p>Stronger shadow effect.</p>
+    </div>
+
+    <div class="card soft">
+        <h2>Soft Shadow</h2>
+        <p>Soft and smooth shadow.</p>
+    </div>
+
+</div>
+
+</body>
+</html>

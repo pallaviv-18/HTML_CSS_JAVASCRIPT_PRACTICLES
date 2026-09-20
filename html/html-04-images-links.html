@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML Experiment 4 - Images and Hyperlinks</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #e53935, #b71c1c);
+            color: white;
+            padding: 25px 8%;
+        }
+
+        header h1 {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* Navigation */
+        nav {
+            margin-top: 15px;
+        }
+
+        nav a {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            padding: 8px 15px;
+            border-radius: 6px;
+            margin-right: 8px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: white;
+            color: #b71c1c;
+        }
+
+        /* Main */
+        main {
+            width: 90%;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        .container {
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .title h2 {
+            color: #b71c1c;
+            font-size: 27px;
+        }
+
+        .title p {
+            color: #666;
+            margin-top: 5px;
+        }
+
+        /* Image Section */
+        .image-section {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .image-section h3 {
+            color: #b71c1c;
+            margin-bottom: 15px;
+        }
+
+        .main-image {
+            width: 100%;
+            max-width: 550px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 4px solid #eee;
+            transition: 0.3s;
+        }
+
+        .main-image:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .image-caption {
+            margin-top: 10px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* Links */
+        .links-section {
+            margin-bottom: 30px;
+        }
+
+        .links-section h3 {
+            color: #b71c1c;
+            margin-bottom: 15px;
+        }
+
+        .link-box {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .link-card {
+            background: #fff5f5;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #f0d0d0;
+            text-align: center;
+        }
+
+        .link-card h4 {
+            margin-bottom: 10px;
+        }
+
+        .link-card p {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 12px;
+        }
+
+        .link-card a {
+            display: inline-block;
+            text-decoration: none;
+            background: #b71c1c;
+            color: white;
+            padding: 8px 14px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .link-card a:hover {
+            background: #e53935;
+            transform: translateY(-2px);
+        }
+
+        /* Clickable Image */
+        .clickable-image {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .clickable-image h3 {
+            color: #b71c1c;
+            margin-bottom: 15px;
+        }
+
+        .clickable-image img {
+            width: 180px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .clickable-image img:hover {
+            transform: scale(1.08);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Information */
+        .info {
+            margin-top: 35px;
+            padding: 20px;
+            background: #fff5f5;
+            border-left: 5px solid #e53935;
+            border-radius: 6px;
+        }
+
+        .info h3 {
+            color: #b71c1c;
+            margin-bottom: 10px;
+        }
+
+        .info p {
+            margin-bottom: 7px;
+            color: #555;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #777;
+            font-size: 13px;
+        }
+
+        /* Responsive */
+        @media (max-width: 750px) {
+            .link-box {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 23px;
+            }
+
+            main {
+                width: 94%;
+            }
+
+            .container {
+                padding: 22px;
+            }
+
+            .main-image {
+                height: 220px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <h1>HTML Practical Lab</h1>
+        <p>Experiment 04 — Images and Hyperlinks</p>
+
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="index.html">Back to Programs</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main>
+
+        <div class="container">
+
+            <!-- Title -->
+            <div class="title">
+                <h2>Images and Hyperlinks</h2>
+                <p>Demonstration of images, links and clickable images</p>
+            </div>
+
+
+            <!-- Image -->
+            <section class="image-section">
+
+                <h3>1. Displaying an Image</h3>
+
+                <img
+                    src="../assets/images/college.jpg"
+                    alt="College Building"
+                    class="main-image"
+                >
+
+                <p class="image-caption">
+                    Example of an image displayed using the HTML &lt;img&gt; element.
+                </p>
+
+            </section>
+
+
+            <!-- Hyperlinks -->
+            <section class="links-section">
+
+                <h3>2. Hyperlinks</h3>
+
+                <div class="link-box">
+
+                    <!-- External Link -->
+                    <div class="link-card">
+
+                        <h4>External Link</h4>
+
+                        <p>
+                            Opens an external website.
+                        </p>
+
+                        <a
+                            href="https://www.google.com"
+                            target="_blank"
+                        >
+                            Visit Google
+                        </a>
+
+                    </div>
+
+
+                    <!-- Internal Link -->
+                    <div class="link-card">
+
+                        <h4>Internal Link</h4>
+
+                        <p>
+                            Opens another page in this project.
+                        </p>
+
+                        <a href="html-01-basic.html">
+                            Experiment 1
+                        </a>
+
+                    </div>
+
+
+                    <!-- Email Link -->
+                    <div class="link-card">
+
+                        <h4>Email Link</h4>
+
+                        <p>
+                            Opens the default email application.
+                        </p>
+
+                        <a href="mailto:student@example.com">
+                            Send Email
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Clickable Image -->
+            <section class="clickable-image">
+
+                <h3>3. Image as a Hyperlink</h3>
+
+                <a
+                    href="https://www.google.com"
+                    target="_blank"
+                >
+                    <img
+                        src="../assets/images/college.jpg"
+                        alt="Click to visit Google"
+                    >
+                </a>
+
+                <p class="image-caption">
+                    Click the image to open Google.
+                </p>
+
+            </section>
+
+
+            <!-- Information -->
+            <section class="info">
+
+                <h3>HTML Elements Used</h3>
+
+                <p>
+                    <strong>&lt;img&gt;</strong> — Used to display images.
+                </p>
+
+                <p>
+                    <strong>src</strong> — Specifies the image location.
+                </p>
+
+                <p>
+                    <strong>alt</strong> — Provides alternative text for the image.
+                </p>
+
+                <p>
+                    <strong>&lt;a&gt;</strong> — Creates a hyperlink.
+                </p>
+
+                <p>
+                    <strong>href</strong> — Specifies the destination of a hyperlink.
+                </p>
+
+                <p>
+                    <strong>target="_blank"</strong> — Opens a link in a new browser tab.
+                </p>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        HTML Practical Lab &copy; 2026
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Double Click Event</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 30px;
+        }
+
+        #box {
+            width: 250px;
+            padding: 50px;
+            margin: 30px auto;
+            background-color: lightcoral;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="../../index.html">Home</a> |
+    <a href="../index.html">JavaScript Programs</a>
+
+    <h1>Double Click Event</h1>
+
+    <div id="box">Double Click Me</div>
+
+    <p id="result">Waiting for double click...</p>
+
+    <script>
+        document.getElementById("box").addEventListener("dblclick", function() {
+            document.getElementById("result").textContent =
+                "Double-click event occurred!";
+        });
+    </script>
+
+</body>
+</html>

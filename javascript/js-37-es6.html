@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><title>JS 37 - ES6</title></head>
+<body style="font-family:Arial;text-align:center;padding:40px">
+
+<h1>ES6 Features</h1>
+<button onclick="run()">Run</button>
+<p id="result"></p>
+
+<script>
+function run(){
+    const student={name:"Pallavi",course:"B.Tech",year:2};
+    const {name,course}=student;
+    const message=`Student: ${name}<br>Course: ${course}`;
+
+    document.getElementById("result").innerHTML=message;
+}
+</script>
+
+<br>
+<a href="../index.html">Home</a> | <a href="index.html">JavaScript Programs</a>
+</body>
+</html>

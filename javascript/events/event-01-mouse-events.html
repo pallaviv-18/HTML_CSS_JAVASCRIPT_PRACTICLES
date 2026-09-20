@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Events</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 30px;
+        }
+
+        #box {
+            width: 250px;
+            height: 150px;
+            margin: 30px auto;
+            background-color: lightblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="../../index.html">Home</a> |
+    <a href="../index.html">JavaScript Programs</a>
+
+    <h1>Mouse Events</h1>
+
+    <div id="box">Move or Click Me</div>
+
+    <p id="result">Perform a mouse action.</p>
+
+    <script>
+        const box = document.getElementById("box");
+        const result = document.getElementById("result");
+
+        box.addEventListener("click", function() {
+            result.textContent = "Mouse Clicked!";
+        });
+
+        box.addEventListener("mouseover", function() {
+            result.textContent = "Mouse Over!";
+        });
+
+        box.addEventListener("mouseout", function() {
+            result.textContent = "Mouse Out!";
+        });
+    </script>
+
+</body>
+</html>

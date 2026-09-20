@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 39 - Dropdown Menu</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+        }
+
+        .navbar {
+            background: #222;
+            padding: 15px 30px;
+            display: flex;
+            gap: 25px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        .navbar a:hover {
+            background: #444;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            background: #3498db;
+            color: white;
+            padding: 10px 18px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: white;
+            min-width: 180px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            z-index: 10;
+        }
+
+        .dropdown-content a {
+            display: block;
+            color: #333;
+            padding: 12px 15px;
+        }
+
+        .dropdown-content a:hover {
+            background: #eee;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        .navigation {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navigation a {
+            background: #333;
+            color: white;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <a href="#">Home</a>
+
+    <div class="dropdown">
+
+        <button class="dropbtn">Courses ▼</button>
+
+        <div class="dropdown-content">
+            <a href="#">HTML</a>
+            <a href="#">CSS</a>
+            <a href="#">JavaScript</a>
+            <a href="#">Python</a>
+        </div>
+
+    </div>
+
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+
+</nav>
+
+<div class="container">
+
+    <h1>CSS Experiment 39 - Dropdown Menu</h1>
+
+    <p>
+        Move your mouse over the <strong>Courses</strong> button to
+        display the dropdown menu.
+    </p>
+
+    <div class="navigation">
+        <a href="css-38-visibility.html">← Previous</a>
+        <a href="index.html">CSS Programs</a>
+        <a href="css-40-image-hover.html">Next →</a>
+    </div>
+
+</div>
+
+</body>
+</html>

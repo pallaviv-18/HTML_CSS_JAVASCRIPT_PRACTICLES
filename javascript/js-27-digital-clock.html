@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS 27 - Digital Clock</title>
+<style>
+body{text-align:center;font-family:Arial;padding:60px;background:#111;color:white}
+#clock{font-size:50px;font-weight:bold}
+</style>
+</head>
+<body>
+
+<h1>Digital Clock</h1>
+<div id="clock"></div>
+
+<script>
+function clock(){
+    document.getElementById("clock").textContent=
+        new Date().toLocaleTimeString();
+}
+setInterval(clock,1000);
+clock();
+</script>
+
+<br>
+<a href="../index.html" style="color:white">Home</a> |
+<a href="index.html" style="color:white">JavaScript Programs</a>
+</body>
+</html>

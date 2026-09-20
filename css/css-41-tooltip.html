@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 41 - Tooltip</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 15px;
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            margin: 60px;
+        }
+
+        .tooltip-button {
+            background: #3498db;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .tooltip-text {
+            visibility: hidden;
+            width: 200px;
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 6px;
+
+            position: absolute;
+            bottom: 130%;
+            left: 50%;
+            transform: translateX(-50%);
+
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip-text::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #222 transparent transparent transparent;
+        }
+
+        .tooltip:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .navigation {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navigation a {
+            background: #333;
+            color: white;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>CSS Experiment 41 - Tooltip</h1>
+
+    <p>Hover over the button to display the tooltip.</p>
+
+    <div class="tooltip">
+
+        <div class="tooltip-button">
+            Hover Me
+        </div>
+
+        <div class="tooltip-text">
+            This is a CSS tooltip!
+        </div>
+
+    </div>
+
+    <div class="navigation">
+        <a href="css-40-image-hover.html">← Previous</a>
+        <a href="index.html">CSS Programs</a>
+        <a href="css-42-button-hover.html">Next →</a>
+    </div>
+
+</div>
+
+</body>
+</html>

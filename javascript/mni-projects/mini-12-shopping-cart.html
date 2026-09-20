@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Cart</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin: 40px;
+        }
+
+        .products {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .product {
+            border: 1px solid #ccc;
+            padding: 20px;
+            width: 180px;
+        }
+
+        button {
+            padding: 8px 15px;
+            margin: 5px;
+        }
+
+        li {
+            list-style: none;
+            margin: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Shopping Cart</h2>
+
+<div class="products">
+
+    <div class="product">
+        <h3>Notebook</h3>
+        <p>₹100</p>
+        <button onclick="addToCart('Notebook', 100)">
+            Add to Cart
+        </button>
+    </div>
+
+    <div class="product">
+        <h3>Pen</h3>
+        <p>₹50</p>
+        <button onclick="addToCart('Pen', 50)">
+            Add to Cart
+        </button>
+    </div>
+
+    <div class="product">
+        <h3>Bag</h3>
+        <p>₹500</p>
+        <button onclick="addToCart('Bag', 500)">
+            Add to Cart
+        </button>
+    </div>
+
+</div>
+
+<h3>Cart</h3>
+
+<ul id="cart"></ul>
+
+<h3>Total: ₹<span id="total">0</span></h3>
+
+<script>
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    function addToCart(name, price) {
+        cart.push({
+            name: name,
+            price: price
+        });
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        displayCart();
+    }
+
+    function displayCart() {
+        const cartElement = document.getElementById("cart");
+        cartElement.innerHTML = "";
+
+        let total = 0;
+
+        cart.forEach(item => {
+            const li = document.createElement("li");
+
+            li.innerHTML =
+                item.name + " - ₹" + item.price;
+
+            cartElement.appendChild(li);
+
+            total += item.price;
+        });
+
+        document.getElementById("total").innerHTML = total;
+    }
+
+    displayCart();
+</script>
+
+<p>
+    <a href="../../index.html">Home</a> |
+    <a href="../index.html">JavaScript Programs</a>
+</p>
+
+</body>
+</html>

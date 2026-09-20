@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Validation Errors</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            text-align: center;
+        }
+
+        form {
+            width: 350px;
+            max-width: 90%;
+            margin: auto;
+            text-align: left;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+            min-height: 18px;
+        }
+
+        button {
+            padding: 10px 25px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="../../index.html">Home</a> |
+    <a href="../index.html">JavaScript Programs</a>
+
+    <h1>Dynamic Validation Errors</h1>
+
+    <form id="validationForm">
+
+        <label>Name</label>
+        <input type="text" id="name">
+        <div id="nameError" class="error"></div>
+
+        <label>Email</label>
+        <input type="text" id="email">
+        <div id="emailError" class="error"></div>
+
+        <label>Password</label>
+        <input type="password" id="password">
+        <div id="passwordError" class="error"></div>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <p id="success"></p>
+
+    <script>
+        document.getElementById("validationForm")
+            .addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+                const name =
+                    document.getElementById("name").value.trim();
+
+                const email =
+                    document.getElementById("email").value.trim();
+
+                const password =
+                    document.getElementById("password").value;
+
+                document.getElementById("nameError").textContent = "";
+                document.getElementById("emailError").textContent = "";
+                document.getElementById("passwordError").textContent = "";
+                document.getElementById("success").textContent = "";
+
+                let valid = true;
+
+                if (name === "") {
+                    document.getElementById("nameError").textContent =
+                        "Name is required.";
+                    valid = false;
+                }
+
+                if (!email.includes("@")) {
+                    document.getElementById("emailError").textContent =
+                        "Enter a valid email.";
+                    valid = false;
+                }
+
+                if (password.length < 6) {
+                    document.getElementById("passwordError").textContent =
+                        "Password must contain at least 6 characters.";
+                    valid = false;
+                }
+
+                if (valid) {
+                    document.getElementById("success").textContent =
+                        "Form submitted successfully!";
+                }
+            });
+    </script>
+
+</body>
+</html>

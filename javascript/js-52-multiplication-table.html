@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS 52 - Multiplication Table</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 40px;
+            background: #f4f7fb;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            max-width: 500px;
+            margin: auto;
+            border-radius: 15px;
+        }
+
+        input, button {
+            padding: 12px;
+            margin: 8px;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 7px;
+        }
+
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid #999;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h1>Multiplication Table</h1>
+
+    <input type="number" id="num" placeholder="Enter number">
+    <br>
+
+    <button onclick="generateTable()">Generate</button>
+
+    <div id="result"></div>
+</div>
+
+<script>
+function generateTable() {
+    let num = Number(document.getElementById("num").value);
+    let output = "<table>";
+
+    for (let i = 1; i <= 10; i++) {
+        output += `<tr>
+            <td>${num} × ${i}</td>
+            <td>${num * i}</td>
+        </tr>`;
+    }
+
+    output += "</table>";
+
+    document.getElementById("result").innerHTML = output;
+}
+</script>
+
+<br>
+
+<a href="../index.html">Home</a> |
+<a href="index.html">JavaScript Programs</a>
+
+</body>
+</html>

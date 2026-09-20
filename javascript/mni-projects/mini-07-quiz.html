@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Application</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .quiz {
+            width: 400px;
+            max-width: 90%;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="quiz">
+
+    <h2>JavaScript Quiz</h2>
+
+    <p>1. Which keyword declares a constant in JavaScript?</p>
+
+    <label>
+        <input type="radio" name="q1" value="var"> var
+    </label><br>
+
+    <label>
+        <input type="radio" name="q1" value="let"> let
+    </label><br>
+
+    <label>
+        <input type="radio" name="q1" value="const"> const
+    </label><br>
+
+    <label>
+        <input type="radio" name="q1" value="define"> define
+    </label>
+
+    <br>
+
+    <button onclick="checkAnswer()">Submit</button>
+
+    <h3 id="result"></h3>
+
+</div>
+
+<script>
+    function checkAnswer() {
+        const answer = document.querySelector(
+            'input[name="q1"]:checked'
+        );
+
+        if (!answer) {
+            document.getElementById("result").innerHTML =
+                "Please select an answer.";
+            return;
+        }
+
+        if (answer.value === "const") {
+            document.getElementById("result").innerHTML =
+                "Correct!";
+        } else {
+            document.getElementById("result").innerHTML =
+                "Wrong answer.";
+        }
+    }
+</script>
+
+<p>
+    <a href="../../index.html">Home</a> |
+    <a href="../index.html">JavaScript Programs</a>
+</p>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Object</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 30px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 8px;
+        }
+
+        #result {
+            margin-top: 20px;
+            word-break: break-all;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="../../index.html">Home</a> |
+    <a href="../index.html">JavaScript Programs</a>
+
+    <h1>Location Object</h1>
+
+    <button onclick="showLocation()">Show Current URL</button>
+    <button onclick="reloadPage()">Reload Page</button>
+
+    <div id="result"></div>
+
+    <script>
+        function showLocation() {
+            document.getElementById("result").innerHTML =
+                "Current URL:<br>" + window.location.href;
+        }
+
+        function reloadPage() {
+            window.location.reload();
+        }
+    </script>
+
+</body>
+</html>

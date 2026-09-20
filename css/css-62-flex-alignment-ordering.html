@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CSS 62 - Flex Alignment</title>
+<style>
+body{font-family:Arial;background:#f4f6f8;padding:30px}
+.container{max-width:900px;margin:auto;background:white;padding:30px;border-radius:12px}
+.flex{display:flex;justify-content:space-between;align-items:center;height:250px;background:#eee;padding:20px}
+.box{width:100px;height:100px;background:#3498db;color:white;display:flex;align-items:center;justify-content:center}
+.one{order:3}.two{order:1}.three{order:2}
+.navigation{margin-top:30px;display:flex;justify-content:space-between}
+a{background:#333;color:white;padding:10px 15px;text-decoration:none;border-radius:5px}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Flex Alignment and Ordering</h1>
+<div class="flex">
+<div class="box one">1</div>
+<div class="box two">2</div>
+<div class="box three">3</div>
+</div>
+<p>CSS order changes the visual order of flex items.</p>
+<div class="navigation">
+<a href="css-61-grid-template-areas.html">← Previous</a>
+<a href="index.html">CSS Programs</a>
+<a href="css-63-responsive-grid.html">Next →</a>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS 46 - Interactive Webpage</title>
+<style>
+body{font-family:Arial;text-align:center;margin:0}
+header{padding:25px;background:#2563eb;color:white}
+section{padding:40px}
+button{padding:12px 20px;border:0;border-radius:7px}
+.dark{background:#222;color:white}
+</style>
+</head>
+<body id="page">
+
+<header>
+<h1>My Interactive Webpage</h1>
+<button onclick="toggleTheme()">Toggle Theme</button>
+</header>
+
+<section>
+<h2 id="title">Welcome!</h2>
+<p id="message">Click the button below.</p>
+<button onclick="changeContent()">Change Content</button>
+</section>
+
+<script>
+function toggleTheme(){
+    document.getElementById("page").classList.toggle("dark");
+}
+
+function changeContent(){
+    document.getElementById("title").textContent="JavaScript is Interactive!";
+    document.getElementById("message").textContent=
+        "DOM manipulation and events are working.";
+}
+</script>
+
+<a href="../index.html">Home</a> | <a href="index.html">JavaScript Programs</a>
+</body>
+</html>

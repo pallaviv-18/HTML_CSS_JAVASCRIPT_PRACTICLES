@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Combinators</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .box {
+            background: white;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px #ccc;
+        }
+
+        /* Descendant combinator */
+        .descendant p {
+            color: blue;
+        }
+
+        /* Child combinator */
+        .child > p {
+            color: green;
+        }
+
+        /* Adjacent sibling */
+        .adjacent h3 + p {
+            color: red;
+        }
+
+        /* General sibling */
+        .general h3 ~ p {
+            color: purple;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>CSS Combinators</h1>
+
+    <div class="box descendant">
+        <h2>Descendant Combinator</h2>
+        <p>This paragraph is a descendant.</p>
+        <div>
+            <p>This paragraph is also a descendant.</p>
+        </div>
+    </div>
+
+    <div class="box child">
+        <h2>Child Combinator</h2>
+        <p>This is a direct child.</p>
+        <div>
+            <p>This is not a direct child.</p>
+        </div>
+    </div>
+
+    <div class="box adjacent">
+        <h2>Adjacent Sibling</h2>
+        <h3>Heading</h3>
+        <p>This paragraph immediately follows the heading.</p>
+        <p>This paragraph does not immediately follow it.</p>
+    </div>
+
+    <div class="box general">
+        <h2>General Sibling</h2>
+        <h3>Heading</h3>
+        <p>General sibling paragraph.</p>
+        <p>Another general sibling paragraph.</p>
+    </div>
+
+</div>
+
+</body>
+</html>

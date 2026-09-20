@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CSS 55 - College Homepage</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial}
+header{background:#222;color:white;padding:20px;text-align:center}
+nav{background:#444;text-align:center;padding:12px}
+nav a{color:white;text-decoration:none;margin:0 15px}
+.hero{padding:80px 20px;text-align:center;background:#e8f1ff}
+.sections{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:30px}
+.card{padding:30px;background:#f4f4f4;border-radius:10px;text-align:center}
+footer{background:#222;color:white;text-align:center;padding:20px}
+.navigation{display:flex;justify-content:space-between;padding:20px}
+.navigation a{background:#555;color:white;padding:10px;text-decoration:none;border-radius:5px}
+@media(max-width:700px){.sections{grid-template-columns:1fr}nav a{display:block;margin:10px}}
+</style>
+</head>
+<body>
+<header><h1>ABC College of Engineering</h1></header>
+<nav><a href="#">Home</a><a href="#">Courses</a><a href="#">Admissions</a><a href="#">Contact</a></nav>
+<section class="hero"><h2>Welcome to Our College</h2><p>Education, Innovation and Excellence</p></section>
+<section class="sections">
+<div class="card"><h2>Courses</h2><p>B.Tech, M.Tech and other programs.</p></div>
+<div class="card"><h2>Campus</h2><p>Modern classrooms and laboratories.</p></div>
+<div class="card"><h2>Activities</h2><p>Clubs, sports and cultural events.</p></div>
+</section>
+<footer>© 2026 ABC College</footer>
+<div class="navigation">
+<a href="css-54-responsive-contact.html">← Previous</a>
+<a href="index.html">CSS Programs</a>
+<a href="css-56-restaurant.html">Next →</a>
+</div>
+</body>
+</html>

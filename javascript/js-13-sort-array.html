@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS 13 - Sort Array</title>
+<style>
+body{font-family:Arial;text-align:center;background:#f4f7fb;padding:40px}
+.box{background:white;padding:30px;max-width:500px;margin:auto;border-radius:15px}
+input,button{padding:12px;margin:8px} button{background:#2563eb;color:white;border:0;border-radius:7px}
+</style>
+</head>
+<body>
+<div class="box">
+<h1>Sort an Array</h1>
+<input id="arr" placeholder="10,3,8,1,5">
+<br>
+<button onclick="sortArray()">Sort</button>
+<p id="result"></p>
+</div>
+
+<script>
+function sortArray(){
+    let arr=document.getElementById("arr").value.split(",").map(Number);
+    arr.sort((a,b)=>a-b);
+    document.getElementById("result").textContent=arr.join(", ");
+}
+</script>
+<br>
+<a href="../index.html">Home</a> | <a href="index.html">JavaScript Programs</a>
+</body>
+</html>

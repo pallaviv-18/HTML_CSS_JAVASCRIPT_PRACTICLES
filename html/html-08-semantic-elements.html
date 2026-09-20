@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML Experiment 8 - Semantic Elements</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #e53935, #b71c1c);
+            color: white;
+            padding: 25px 8%;
+        }
+
+        header h1 {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* Navigation */
+        nav {
+            margin-top: 15px;
+        }
+
+        nav a {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            padding: 8px 15px;
+            border-radius: 6px;
+            margin-right: 8px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: white;
+            color: #b71c1c;
+        }
+
+        /* Main */
+        main {
+            width: 90%;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        /* Section */
+        section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+        }
+
+        section h2 {
+            color: #b71c1c;
+            margin-bottom: 15px;
+        }
+
+        section > p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* Articles */
+        .article-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        article {
+            background: #fff5f5;
+            padding: 20px;
+            border-left: 5px solid #e53935;
+            border-radius: 8px;
+        }
+
+        article h3 {
+            color: #b71c1c;
+            margin-bottom: 8px;
+        }
+
+        article p {
+            color: #555;
+            font-size: 14px;
+        }
+
+        /* Semantic explanation */
+        .elements {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .element-card {
+            border: 1px solid #ddd;
+            padding: 18px;
+            border-radius: 8px;
+            background: #fafafa;
+        }
+
+        .element-card strong {
+            color: #b71c1c;
+            font-size: 17px;
+        }
+
+        .element-card p {
+            color: #666;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        /* Footer */
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            font-size: 14px;
+        }
+
+        footer p {
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+
+        /* Responsive */
+        @media (max-width: 700px) {
+
+            .article-container,
+            .elements {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 23px;
+            }
+
+            main {
+                width: 94%;
+            }
+
+            section {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Semantic Header -->
+    <header>
+
+        <h1>HTML Practical Lab</h1>
+
+        <p>
+            Experiment 08 — Semantic Elements
+        </p>
+
+        <!-- Semantic Navigation -->
+        <nav>
+
+            <a href="../index.html">Home</a>
+
+            <a href="index.html">Back to Programs</a>
+
+            <a href="#articles">Articles</a>
+
+            <a href="#elements">Elements</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main>
+
+
+        <!-- Semantic Section -->
+        <section>
+
+            <h2>Welcome to My Webpage</h2>
+
+            <p>
+                This webpage demonstrates the use of semantic
+                HTML elements to organize and structure content.
+            </p>
+
+            <p>
+                Semantic elements clearly describe the purpose
+                of different parts of a webpage.
+            </p>
+
+        </section>
+
+
+        <!-- Article Section -->
+        <section id="articles">
+
+            <h2>Articles</h2>
+
+            <p>
+                The following content is organized using
+                the semantic article element.
+            </p>
+
+            <div class="article-container">
+
+
+                <!-- Article 1 -->
+                <article>
+
+                    <h3>HTML</h3>
+
+                    <p>
+                        HTML stands for HyperText Markup Language.
+                        It provides the basic structure of webpages.
+                    </p>
+
+                </article>
+
+
+                <!-- Article 2 -->
+                <article>
+
+                    <h3>CSS</h3>
+
+                    <p>
+                        CSS stands for Cascading Style Sheets.
+                        It is used to style and design webpages.
+                    </p>
+
+                </article>
+
+
+                <!-- Article 3 -->
+                <article>
+
+                    <h3>JavaScript</h3>
+
+                    <p>
+                        JavaScript adds interactivity and
+                        dynamic behavior to webpages.
+                    </p>
+
+                </article>
+
+
+                <!-- Article 4 -->
+                <article>
+
+                    <h3>Web Development</h3>
+
+                    <p>
+                        Web development combines HTML, CSS
+                        and JavaScript to create websites.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Semantic Elements Explanation -->
+        <section id="elements">
+
+            <h2>Semantic Elements Used</h2>
+
+            <div class="elements">
+
+
+                <div class="element-card">
+
+                    <strong>&lt;header&gt;</strong>
+
+                    <p>
+                        Represents the introductory or
+                        header content of a webpage.
+                    </p>
+
+                </div>
+
+
+                <div class="element-card">
+
+                    <strong>&lt;nav&gt;</strong>
+
+                    <p>
+                        Contains navigation links for
+                        different pages or sections.
+                    </p>
+
+                </div>
+
+
+                <div class="element-card">
+
+                    <strong>&lt;section&gt;</strong>
+
+                    <p>
+                        Represents a meaningful section
+                        of related content.
+                    </p>
+
+                </div>
+
+
+                <div class="element-card">
+
+                    <strong>&lt;article&gt;</strong>
+
+                    <p>
+                        Represents independent and
+                        self-contained content.
+                    </p>
+
+                </div>
+
+
+                <div class="element-card">
+
+                    <strong>&lt;footer&gt;</strong>
+
+                    <p>
+                        Represents footer information
+                        for a webpage or section.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Semantic Footer -->
+    <footer>
+
+        <strong>HTML Practical Lab</strong>
+
+        <p>
+            Experiment 08 — Semantic Elements &copy; 2026
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

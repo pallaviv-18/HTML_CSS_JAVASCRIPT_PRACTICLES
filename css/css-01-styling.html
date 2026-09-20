@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Experiment 1 - CSS Styling</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css-01-style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        .internal-box {
+            background-color: #fff0f0;
+            border: 2px dashed #b31217;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        .internal-box h2 {
+            color: #b31217;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Inline CSS -->
+    <header style="
+        background: linear-gradient(135deg, #b31217, #e52d27);
+        color: white;
+        text-align: center;
+        padding: 35px 20px;
+    ">
+
+        <h1>CSS Styling Methods</h1>
+
+        <p>
+            Experiment 1 - Inline, Internal and External CSS
+        </p>
+
+    </header>
+
+
+    <div class="container">
+
+        <h2 class="main-title">
+            Three Ways to Apply CSS
+        </h2>
+
+
+        <!-- Inline CSS -->
+        <div class="example inline-example">
+
+            <h2>1. Inline CSS</h2>
+
+            <p style="
+                color: #b31217;
+                font-size: 18px;
+                font-weight: bold;
+            ">
+                This paragraph is styled using Inline CSS.
+            </p>
+
+            <p>
+                Inline CSS is written directly inside the
+                <strong>style</strong> attribute of an HTML element.
+            </p>
+
+        </div>
+
+
+        <!-- Internal CSS -->
+        <div class="internal-box">
+
+            <h2>2. Internal CSS</h2>
+
+            <p>
+                This section is styled using Internal CSS.
+            </p>
+
+            <p>
+                Internal CSS is written inside the
+                <strong>&lt;style&gt;</strong> tag in the
+                HTML document.
+            </p>
+
+        </div>
+
+
+        <!-- External CSS -->
+        <div class="example external-example">
+
+            <h2>3. External CSS</h2>
+
+            <p>
+                This section is styled using External CSS.
+            </p>
+
+            <p>
+                External CSS is written in a separate
+                <strong>.css</strong> file and connected using
+                the <strong>&lt;link&gt;</strong> element.
+            </p>
+
+        </div>
+
+
+        <!-- Comparison -->
+        <div class="comparison">
+
+            <h2>Comparison</h2>
+
+            <table>
+
+                <tr>
+                    <th>CSS Type</th>
+                    <th>Where It Is Written</th>
+                </tr>
+
+                <tr>
+                    <td>Inline CSS</td>
+                    <td>Inside the HTML element</td>
+                </tr>
+
+                <tr>
+                    <td>Internal CSS</td>
+                    <td>Inside the &lt;style&gt; tag</td>
+                </tr>
+
+                <tr>
+                    <td>External CSS</td>
+                    <td>Inside a separate CSS file</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+
+        <!-- Navigation -->
+        <div class="navigation">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="index.html">
+                Back to Programs
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+
+        <p>
+            CSS Practical Lab | Experiment 1
+        </p>
+
+    </footer>
+
+</body>
+</html>

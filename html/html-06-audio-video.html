@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML Experiment 6 - Audio and Video</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #e53935, #b71c1c);
+            color: white;
+            padding: 25px 8%;
+        }
+
+        header h1 {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* Navigation */
+        nav {
+            margin-top: 15px;
+        }
+
+        nav a {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            padding: 8px 15px;
+            border-radius: 6px;
+            margin-right: 8px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: white;
+            color: #b71c1c;
+        }
+
+        /* Main */
+        main {
+            width: 90%;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        .container {
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .title h2 {
+            color: #b71c1c;
+            font-size: 27px;
+        }
+
+        .title p {
+            color: #666;
+            margin-top: 5px;
+        }
+
+        /* Media cards */
+        .media-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .media-card {
+            background: #fafafa;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            padding: 25px;
+        }
+
+        .media-card h3 {
+            color: #b71c1c;
+            margin-bottom: 10px;
+        }
+
+        .media-card p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        /* Audio */
+        audio {
+            width: 100%;
+        }
+
+        /* Video */
+        video {
+            width: 100%;
+            max-height: 300px;
+            border-radius: 8px;
+            background: #111;
+        }
+
+        /* Information */
+        .info {
+            margin-top: 30px;
+            padding: 20px;
+            background: #fff5f5;
+            border-left: 5px solid #e53935;
+            border-radius: 6px;
+        }
+
+        .info h3 {
+            color: #b71c1c;
+            margin-bottom: 10px;
+        }
+
+        .info p {
+            color: #555;
+            margin-bottom: 7px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #777;
+            font-size: 13px;
+        }
+
+        /* Responsive */
+        @media (max-width: 750px) {
+            .media-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 23px;
+            }
+
+            main {
+                width: 94%;
+            }
+
+            .container {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <h1>HTML Practical Lab</h1>
+        <p>Experiment 06 — Audio and Video</p>
+
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="index.html">Back to Programs</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main>
+
+        <div class="container">
+
+            <!-- Title -->
+            <div class="title">
+
+                <h2>Audio and Video</h2>
+
+                <p>
+                    Demonstration of multimedia elements in HTML
+                </p>
+
+            </div>
+
+
+            <!-- Audio and Video -->
+            <div class="media-container">
+
+                <!-- Audio -->
+                <div class="media-card">
+
+                    <h3>1. Audio</h3>
+
+                    <p>
+                        The audio element is used to play an audio file
+                        directly on a webpage.
+                    </p>
+
+                    <audio controls>
+
+                        <source
+                            src="../assets/audio/sample.mp3"
+                            type="audio/mpeg"
+                        >
+
+                        Your browser does not support the audio element.
+
+                    </audio>
+
+                </div>
+
+
+                <!-- Video -->
+                <div class="media-card">
+
+                    <h3>2. Video</h3>
+
+                    <p>
+                        The video element is used to display and play
+                        a video file on a webpage.
+                    </p>
+
+                    <video controls>
+
+                        <source
+                            src="../assets/video/sample.mp4"
+                            type="video/mp4"
+                        >
+
+                        Your browser does not support the video element.
+
+                    </video>
+
+                </div>
+
+            </div>
+
+
+            <!-- Information -->
+            <section class="info">
+
+                <h3>HTML Elements Used</h3>
+
+                <p>
+                    <strong>&lt;audio&gt;</strong> — Embeds audio content.
+                </p>
+
+                <p>
+                    <strong>&lt;video&gt;</strong> — Embeds video content.
+                </p>
+
+                <p>
+                    <strong>&lt;source&gt;</strong> — Specifies the media file.
+                </p>
+
+                <p>
+                    <strong>controls</strong> — Displays play, pause,
+                    volume and other media controls.
+                </p>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        HTML Practical Lab &copy; 2026
+    </footer>
+
+</body>
+
+</html>

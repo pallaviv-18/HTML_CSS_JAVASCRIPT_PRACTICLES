@@ -1,0 +1,164 @@
+/* =========================================
+   CSS Experiment 1
+   External CSS
+   ========================================= */
+
+
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* Main Container */
+.container {
+    max-width: 950px;
+    margin: 40px auto;
+    padding: 30px;
+
+    background-color: white;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Main Title */
+.main-title {
+    text-align: center;
+    color: #b31217;
+    margin-bottom: 30px;
+}
+
+
+/* Example Boxes */
+.example {
+    padding: 25px;
+    margin-bottom: 20px;
+
+    border-radius: 10px;
+}
+
+
+/* Inline CSS Example */
+.inline-example {
+    background-color: #f8f8f8;
+    border: 2px solid #ddd;
+}
+
+.inline-example h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+
+/* External CSS Example */
+.external-example {
+    background-color: #f0f5ff;
+    border: 2px solid #9bb7e0;
+}
+
+.external-example h2 {
+    color: #1d4f91;
+    margin-bottom: 10px;
+}
+
+
+/* Comparison Section */
+.comparison {
+    margin-top: 30px;
+}
+
+.comparison h2 {
+    color: #b31217;
+    margin-bottom: 15px;
+}
+
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #b31217;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+
+/* Navigation */
+.navigation {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.navigation a {
+    display: inline-block;
+
+    text-decoration: none;
+
+    background-color: #333;
+    color: white;
+
+    padding: 10px 18px;
+
+    border-radius: 8px;
+
+    margin: 5px;
+}
+
+.navigation a:hover {
+    background-color: #b31217;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+
+
+/* Responsive Design */
+@media (max-width: 600px) {
+
+    .container {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 9px;
+    }
+}

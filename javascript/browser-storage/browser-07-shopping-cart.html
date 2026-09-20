@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .product {
+            display: inline-block;
+            width: 180px;
+            margin: 15px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+
+        #cart {
+            margin-top: 30px;
+        }
+
+        li {
+            margin: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="../../index.html">Home</a> |
+    <a href="../index.html">JavaScript Programs</a>
+
+    <h1>Shopping Cart Using localStorage</h1>
+
+    <div class="product">
+        <h3>Notebook</h3>
+        <p>₹100</p>
+        <button onclick="addToCart('Notebook')">
+            Add to Cart
+        </button>
+    </div>
+
+    <div class="product">
+        <h3>Pen</h3>
+        <p>₹30</p>
+        <button onclick="addToCart('Pen')">
+            Add to Cart
+        </button>
+    </div>
+
+    <div class="product">
+        <h3>Bag</h3>
+        <p>₹500</p>
+        <button onclick="addToCart('Bag')">
+            Add to Cart
+        </button>
+    </div>
+
+    <div id="cart">
+        <h2>Cart</h2>
+        <ul id="cartList"></ul>
+        <button onclick="clearCart()">Clear Cart</button>
+    </div>
+
+    <script>
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        function displayCart() {
+            const cartList = document.getElementById("cartList");
+
+            cartList.innerHTML = "";
+
+            cart.forEach(function(item) {
+                const li = document.createElement("li");
+
+                li.textContent = item;
+
+                cartList.appendChild(li);
+            });
+        }
+
+        function addToCart(product) {
+            cart.push(product);
+
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            displayCart();
+        }
+
+        function clearCart() {
+            cart = [];
+
+            localStorage.removeItem("cart");
+
+            displayCart();
+        }
+
+        displayCart();
+    </script>
+
+</body>
+</html>

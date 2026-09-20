@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slideshow</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .slideshow {
+            width: 500px;
+            max-width: 90%;
+            margin: 30px auto;
+        }
+
+        .slideshow img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="../../index.html">Home</a> |
+    <a href="../index.html">JavaScript Programs</a>
+
+    <h1>Image Slideshow</h1>
+
+    <div class="slideshow">
+        <img id="slideImage"
+             src="../../assets/images/college.jpg"
+             alt="Slideshow Image">
+    </div>
+
+    <button onclick="previousImage()">Previous</button>
+    <button onclick="nextImage()">Next</button>
+
+    <script>
+        const images = [
+            "../../assets/images/college.jpg",
+            "../../assets/images/image2.jpg",
+            "../../assets/images/image3.jpg"
+        ];
+
+        let currentIndex = 0;
+
+        function showImage() {
+            document.getElementById("slideImage").src =
+                images[currentIndex];
+        }
+
+        function nextImage() {
+            currentIndex++;
+
+            if (currentIndex >= images.length) {
+                currentIndex = 0;
+            }
+
+            showImage();
+        }
+
+        function previousImage() {
+            currentIndex--;
+
+            if (currentIndex < 0) {
+                currentIndex = images.length - 1;
+            }
+
+            showImage();
+        }
+    </script>
+
+</body>
+</html>

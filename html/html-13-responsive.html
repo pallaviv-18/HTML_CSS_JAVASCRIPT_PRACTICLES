@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Experiment 13 - Responsive Webpage</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #b31217, #e52d27);
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .title {
+            text-align: center;
+            color: #b31217;
+            margin-bottom: 30px;
+        }
+
+        /* Responsive cards */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            padding: 25px;
+            background-color: #fff0f0;
+            border: 2px solid #e0b0b0;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .card h3 {
+            color: #b31217;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #555;
+        }
+
+        .info {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f8f8f8;
+            border-left: 5px solid #b31217;
+            border-radius: 8px;
+        }
+
+        .navigation {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .navigation a {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #333;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 8px;
+            margin: 5px;
+        }
+
+        .navigation a:hover {
+            background-color: #b31217;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+
+        /* Tablet */
+        @media (max-width: 900px) {
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 25px;
+            }
+
+            .container {
+                margin: 20px;
+                padding: 20px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Responsive Webpage</h1>
+        <p>Experiment 13 - Using CSS Media Queries</p>
+    </header>
+
+    <div class="container">
+
+        <h2 class="title">Responsive Design</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>HTML</h3>
+                <p>
+                    HTML is used to create the structure
+                    of a webpage.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>CSS</h3>
+                <p>
+                    CSS is used to style and design
+                    webpages.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>JavaScript</h3>
+                <p>
+                    JavaScript is used to add
+                    interactivity to webpages.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="info">
+            <h3>How is this page responsive?</h3>
+
+            <p>
+                On large screens, the cards appear in three columns.
+                On tablet screens, they appear in two columns.
+                On mobile screens, they appear in a single column.
+            </p>
+        </div>
+
+        <div class="navigation">
+            <a href="../index.html">Home</a>
+            <a href="index.html">Back to Programs</a>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>HTML Practical Lab | Experiment 13</p>
+    </footer>
+
+</body>
+</html>

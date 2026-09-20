@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head><title>JS 39 - Classes</title></head>
+<body style="font-family:Arial;text-align:center;padding:40px">
+
+<h1>Classes and Objects</h1>
+<button onclick="run()">Create Object</button>
+<p id="result"></p>
+
+<script>
+class Student{
+    constructor(name,course){
+        this.name=name;
+        this.course=course;
+    }
+
+    display(){
+        return this.name+" - "+this.course;
+    }
+}
+
+function run(){
+    let student=new Student("Pallavi","B.Tech");
+    document.getElementById("result").textContent=student.display();
+}
+</script>
+
+<br>
+<a href="../index.html">Home</a> | <a href="index.html">JavaScript Programs</a>
+</body>
+</html>

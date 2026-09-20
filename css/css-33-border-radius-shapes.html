@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Radius Shapes</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .shape {
+            width: 150px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .rounded {
+            background: #2563eb;
+            border-radius: 20px;
+        }
+
+        .circle {
+            background: #16a34a;
+            border-radius: 50%;
+        }
+
+        .oval {
+            background: #9333ea;
+            border-radius: 50%;
+        }
+
+        .pill {
+            width: 200px;
+            background: #ea580c;
+            border-radius: 100px;
+        }
+
+        .leaf {
+            background: #0891b2;
+            border-radius: 0 100% 0 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>CSS Border Radius Shapes</h1>
+
+<div class="container">
+
+    <div class="shape rounded">
+        Rounded
+    </div>
+
+    <div class="shape circle">
+        Circle
+    </div>
+
+    <div class="shape oval">
+        Oval
+    </div>
+
+    <div class="shape pill">
+        Pill
+    </div>
+
+    <div class="shape leaf">
+        Leaf
+    </div>
+
+</div>
+
+</body>
+</html>

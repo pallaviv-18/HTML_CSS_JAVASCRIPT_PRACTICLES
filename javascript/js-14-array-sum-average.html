@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS 14 - Array Sum Average</title>
+<style>
+body{font-family:Arial;text-align:center;background:#f4f7fb;padding:40px}
+.box{background:white;padding:30px;max-width:500px;margin:auto;border-radius:15px}
+input,button{padding:12px;margin:8px} button{background:#2563eb;color:white;border:0;border-radius:7px}
+</style>
+</head>
+<body>
+<div class="box">
+<h1>Array Sum & Average</h1>
+<input id="arr" placeholder="10,20,30,40">
+<br>
+<button onclick="calculate()">Calculate</button>
+<p id="result"></p>
+</div>
+
+<script>
+function calculate(){
+    let arr=document.getElementById("arr").value.split(",").map(Number);
+    let sum=arr.reduce((a,b)=>a+b,0);
+    document.getElementById("result").innerHTML=
+        "Sum = "+sum+"<br>Average = "+(sum/arr.length);
+}
+</script>
+<br>
+<a href="../index.html">Home</a> | <a href="index.html">JavaScript Programs</a>
+</body>
+</html>

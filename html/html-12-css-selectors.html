@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Experiment 12 - CSS Selectors</title>
+
+    <style>
+        /* Universal Selector */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* Element Selector */
+        h2 {
+            color: #b31217;
+        }
+
+        /* Class Selector */
+        .description {
+            color: #555;
+            font-size: 17px;
+        }
+
+        /* ID Selector */
+        #special-text {
+            color: #e52d27;
+            font-weight: bold;
+        }
+
+        header {
+            background: linear-gradient(135deg, #b31217, #e52d27);
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            margin-bottom: 8px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            margin-bottom: 25px;
+            padding: 20px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+        }
+
+        .box {
+            background-color: #fff0f0;
+            border: 3px solid #b31217;
+            padding: 20px;
+            margin-top: 15px;
+            border-radius: 8px;
+        }
+
+        .box h3 {
+            color: #b31217;
+            margin-bottom: 10px;
+        }
+
+        .color-box {
+            background-color: #b31217;
+            color: white;
+            padding: 20px;
+            margin-top: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .font-box {
+            font-family: Georgia, serif;
+            font-size: 20px;
+            font-style: italic;
+            font-weight: bold;
+            padding: 20px;
+            margin-top: 15px;
+            border: 2px dashed #b31217;
+        }
+
+        .navigation {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .navigation a {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #333;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 8px;
+            margin: 5px;
+        }
+
+        .navigation a:hover {
+            background-color: #b31217;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 20px;
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>CSS Selectors & Styling</h1>
+        <p>Experiment 12 - Colors, Fonts, Margins, Padding and Borders</p>
+    </header>
+
+    <div class="container">
+
+        <div class="section">
+            <h2>1. CSS Selectors</h2>
+
+            <p class="description">
+                This paragraph uses a class selector.
+            </p>
+
+            <p id="special-text">
+                This paragraph uses an ID selector.
+            </p>
+
+            <div class="box">
+                <h3>Different Selectors</h3>
+
+                <p>
+                    CSS provides different selectors to target HTML elements.
+                </p>
+
+                <ul>
+                    <li>Universal Selector (*)</li>
+                    <li>Element Selector</li>
+                    <li>Class Selector</li>
+                    <li>ID Selector</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="section">
+            <h2>2. Colors</h2>
+
+            <p>
+                CSS can be used to change the foreground and background
+                colors of HTML elements.
+            </p>
+
+            <div class="color-box">
+                This box demonstrates CSS colors.
+            </div>
+        </div>
+
+
+        <div class="section">
+            <h2>3. Fonts</h2>
+
+            <div class="font-box">
+                This text demonstrates font family, font size,
+                font style and font weight.
+            </div>
+        </div>
+
+
+        <div class="section">
+            <h2>4. Margins and Padding</h2>
+
+            <div class="box">
+                <p>
+                    <strong>Margin:</strong> Space outside an element.
+                </p>
+
+                <p>
+                    <strong>Padding:</strong> Space between the content
+                    and the border of an element.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="section">
+            <h2>5. Borders</h2>
+
+            <div class="box">
+                This box demonstrates border style, width,
+                color and border radius.
+            </div>
+        </div>
+
+
+        <div class="navigation">
+            <a href="../index.html">Home</a>
+            <a href="index.html">Back to Programs</a>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>HTML Practical Lab | Experiment 12</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notes App</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin: 40px;
+        }
+
+        textarea {
+            width: 80%;
+            height: 150px;
+            padding: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+        }
+
+        #savedNote {
+            margin: 20px auto;
+            padding: 15px;
+            width: 80%;
+            border: 1px solid #ccc;
+            min-height: 50px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Notes App</h2>
+
+<textarea id="note" placeholder="Write your note..."></textarea>
+
+<br>
+
+<button onclick="saveNote()">Save Note</button>
+<button onclick="clearNote()">Clear Note</button>
+
+<div id="savedNote"></div>
+
+<script>
+    function saveNote() {
+        const note = document.getElementById("note").value;
+
+        localStorage.setItem("myNote", note);
+
+        displayNote();
+    }
+
+    function displayNote() {
+        const note = localStorage.getItem("myNote") || "";
+
+        document.getElementById("note").value = note;
+
+        document.getElementById("savedNote").innerHTML =
+            note;
+    }
+
+    function clearNote() {
+        localStorage.removeItem("myNote");
+
+        document.getElementById("note").value = "";
+        document.getElementById("savedNote").innerHTML = "";
+    }
+
+    displayNote();
+</script>
+
+<p>
+    <a href="../../index.html">Home</a> |
+    <a href="../index.html">JavaScript Programs</a>
+</p>
+
+</body>
+</html>

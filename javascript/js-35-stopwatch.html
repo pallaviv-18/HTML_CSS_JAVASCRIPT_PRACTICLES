@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head><title>JS 35 - Stopwatch</title></head>
+<body style="font-family:Arial;text-align:center;padding:50px">
+
+<h1>Stopwatch</h1>
+<h2 id="time">0</h2>
+
+<button onclick="start()">Start</button>
+<button onclick="stop()">Stop</button>
+<button onclick="reset()">Reset</button>
+
+<script>
+let seconds=0;
+let timer=null;
+
+function start(){
+    if(timer===null){
+        timer=setInterval(function(){
+            seconds++;
+            document.getElementById("time").textContent=seconds+" seconds";
+        },1000);
+    }
+}
+
+function stop(){
+    clearInterval(timer);
+    timer=null;
+}
+
+function reset(){
+    stop();
+    seconds=0;
+    document.getElementById("time").textContent="0";
+}
+</script>
+
+<br>
+<a href="../index.html">Home</a> | <a href="index.html">JavaScript Programs</a>
+</body>
+</html>

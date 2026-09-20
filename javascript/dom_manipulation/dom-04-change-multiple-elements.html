@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Multiple HTML Elements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .item {
+            margin: 15px;
+            font-size: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="../../index.html">Home</a> |
+    <a href="../index.html">JavaScript Programs</a>
+
+    <h1 id="heading">Original Heading</h1>
+
+    <p class="item">Original Paragraph 1</p>
+    <p class="item">Original Paragraph 2</p>
+    <p class="item">Original Paragraph 3</p>
+
+    <button onclick="changeElements()">Change Elements</button>
+
+    <script>
+        function changeElements() {
+            document.getElementById("heading").textContent =
+                "Heading Changed Successfully";
+
+            const items = document.getElementsByClassName("item");
+
+            for (let i = 0; i < items.length; i++) {
+                items[i].textContent = "Paragraph " + (i + 1) + " Changed";
+                items[i].style.color = "blue";
+            }
+        }
+    </script>
+
+</body>
+</html>

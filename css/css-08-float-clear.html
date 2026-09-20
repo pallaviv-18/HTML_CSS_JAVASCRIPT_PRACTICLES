@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Experiment 8 - Float and Clear</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f6f8;
+        }
+
+        header {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background: #555;
+            text-align: center;
+            padding: 12px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .container {
+            width: 85%;
+            margin: 30px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .float-box {
+            width: 180px;
+            height: 120px;
+            background: #3498db;
+            color: white;
+            float: left;
+            margin: 0 20px 15px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+
+        .content {
+            line-height: 1.7;
+        }
+
+        .clear-section {
+            clear: both;
+            margin-top: 30px;
+            padding: 20px;
+            background: #e8f4fc;
+            border-left: 5px solid #3498db;
+        }
+
+        .footer {
+            text-align: center;
+            background: #333;
+            color: white;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: 90%;
+            }
+
+            .float-box {
+                float: none;
+                margin: 0 auto 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>CSS Experiment 8</h1>
+        <p>Float and Clear Properties</p>
+    </header>
+
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="index.html">Back to CSS Programs</a>
+    </nav>
+
+    <div class="container">
+
+        <h2>Using Float</h2>
+
+        <div class="float-box">
+            FLOAT
+        </div>
+
+        <div class="content">
+            <p>
+                The CSS <strong>float</strong> property is used to position
+                an element to the left or right of its container.
+            </p>
+
+            <p>
+                Other content can flow around a floated element.
+                In this example, the blue box is floated to the left
+                and the text flows around it.
+            </p>
+
+            <p>
+                Float was traditionally used for creating layouts and
+                positioning images alongside text.
+            </p>
+        </div>
+
+        <div class="clear-section">
+            <h2>Using Clear</h2>
+
+            <p>
+                The <strong>clear</strong> property prevents an element
+                from appearing beside floated elements.
+            </p>
+
+            <p>
+                Here, <code>clear: both;</code> is used so this section
+                starts below the floated box.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>CSS Practical Programs</p>
+    </div>
+
+</body>
+</html>

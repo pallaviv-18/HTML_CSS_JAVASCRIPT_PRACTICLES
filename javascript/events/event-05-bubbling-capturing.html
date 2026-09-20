@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling and Capturing</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 30px;
+        }
+
+        #outer {
+            background-color: lightblue;
+            padding: 40px;
+        }
+
+        #inner {
+            background-color: lightgreen;
+            padding: 30px;
+        }
+
+        button {
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="../../index.html">Home</a> |
+    <a href="../index.html">JavaScript Programs</a>
+
+    <h1>Event Bubbling and Capturing</h1>
+
+    <div id="outer">
+        Outer Element
+        <div id="inner">
+            Inner Element
+            <br><br>
+            <button id="btn">Click Me</button>
+        </div>
+    </div>
+
+    <p id="result"></p>
+
+    <script>
+        const outer = document.getElementById("outer");
+        const inner = document.getElementById("inner");
+        const button = document.getElementById("btn");
+        const result = document.getElementById("result");
+
+        outer.addEventListener("click", function() {
+            result.textContent += " Outer";
+        });
+
+        inner.addEventListener("click", function() {
+            result.textContent += " Inner";
+        });
+
+        button.addEventListener("click", function() {
+            result.textContent = "Button clicked:";
+        });
+    </script>
+
+</body>
+</html>

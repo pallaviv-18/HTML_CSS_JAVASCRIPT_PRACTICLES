@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Gradients</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f4f4;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .gradient {
+            height: 150px;
+            margin: 20px 0;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .linear {
+            background: linear-gradient(to right, #2563eb, #9333ea);
+        }
+
+        .diagonal {
+            background: linear-gradient(135deg, #f97316, #ec4899);
+        }
+
+        .radial {
+            background: radial-gradient(circle, #22c55e, #166534);
+        }
+
+        .multi {
+            background: linear-gradient(
+                to right,
+                #ef4444,
+                #f59e0b,
+                #22c55e,
+                #3b82f6
+            );
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>CSS Gradients</h1>
+
+    <div class="gradient linear">
+        Linear Gradient
+    </div>
+
+    <div class="gradient diagonal">
+        Diagonal Gradient
+    </div>
+
+    <div class="gradient radial">
+        Radial Gradient
+    </div>
+
+    <div class="gradient multi">
+        Multiple Colors
+    </div>
+
+</div>
+
+</body>
+</html>

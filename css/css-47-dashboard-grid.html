@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CSS 47 - Dashboard Grid</title>
+<style>
+body{font-family:Arial;background:#f4f6f8;margin:0}
+header{background:#222;color:white;padding:20px;text-align:center}
+.dashboard{padding:30px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:white;padding:30px;border-radius:12px;box-shadow:0 3px 10px #ccc}
+.card h2{margin-top:0}
+.number{font-size:35px;font-weight:bold}
+@media(max-width:700px){.dashboard{grid-template-columns:1fr}}
+.navigation{padding:20px;display:flex;justify-content:space-between}
+a{background:#333;color:white;padding:10px 15px;text-decoration:none;border-radius:5px}
+</style>
+</head>
+<body>
+<header><h1>Student Dashboard</h1></header>
+<div class="dashboard">
+<div class="card"><h2>Assignments</h2><div class="number">12</div><p>Completed assignments</p></div>
+<div class="card"><h2>Projects</h2><div class="number">5</div><p>Completed projects</p></div>
+<div class="card"><h2>Courses</h2><div class="number">8</div><p>Active courses</p></div>
+<div class="card"><h2>Attendance</h2><div class="number">92%</div><p>Current attendance</p></div>
+<div class="card"><h2>Tests</h2><div class="number">15</div><p>Tests completed</p></div>
+<div class="card"><h2>CGPA</h2><div class="number">9.2</div><p>Current CGPA</p></div>
+</div>
+<div class="navigation">
+<a href="css-46-card-flexbox.html">← Previous</a>
+<a href="index.html">CSS Programs</a>
+<a href="css-48-two-column-grid.html">Next →</a>
+</div>
+</body>
+</html>

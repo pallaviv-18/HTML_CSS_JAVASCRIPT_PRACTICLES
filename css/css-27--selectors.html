@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1e3a8a;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px #ccc;
+        }
+
+        .highlight {
+            color: green;
+            font-weight: bold;
+        }
+
+        #special {
+            color: red;
+            font-size: 20px;
+        }
+
+        input[type="text"] {
+            border: 2px solid blue;
+            padding: 8px;
+        }
+
+        h2, h3 {
+            color: #2563eb;
+        }
+
+        .card p {
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>CSS Selector Types</h1>
+
+    <div class="card">
+        <h2>Universal Selector</h2>
+        <p>The <strong>*</strong> selector applies styles to all elements.</p>
+    </div>
+
+    <div class="card">
+        <h2>Element Selector</h2>
+        <p>Element selectors target HTML elements such as p, h1 and h2.</p>
+    </div>
+
+    <div class="card">
+        <h2>Class Selector</h2>
+        <p class="highlight">This paragraph uses a class selector.</p>
+    </div>
+
+    <div class="card">
+        <h2>ID Selector</h2>
+        <p id="special">This paragraph uses an ID selector.</p>
+    </div>
+
+    <div class="card">
+        <h2>Attribute Selector</h2>
+        <input type="text" placeholder="Text input">
+    </div>
+
+    <div class="card">
+        <h2>Grouping Selector</h2>
+        <h2>This heading is grouped.</h2>
+        <h3>This heading is also grouped.</h3>
+    </div>
+
+    <div class="card">
+        <h2>Descendant Selector</h2>
+        <p>This paragraph is inside the card.</p>
+    </div>
+
+</div>
+
+</body>
+</html>

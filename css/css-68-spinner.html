@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CSS 68 - Spinner</title>
+<style>
+body{font-family:Arial;background:#f4f6f8;text-align:center;padding:50px}
+.spinner{width:80px;height:80px;border:10px solid #ddd;border-top:10px solid #333;border-radius:50%;animation:spin 1s linear infinite;margin:80px auto}
+@keyframes spin{to{transform:rotate(360deg)}}
+.navigation{display:flex;justify-content:space-between}
+a{background:#333;color:white;padding:10px 15px;text-decoration:none;border-radius:5px}
+</style>
+</head>
+<body>
+<h1>CSS Loading Spinner</h1>
+<div class="spinner"></div>
+<p>Loading...</p>
+<div class="navigation">
+<a href="css-67-keyframes.html">← Previous</a>
+<a href="index.html">CSS Programs</a>
+<a href="css-69-sliding-animation.html">Next →</a>
+</div>
+</body>
+</html>

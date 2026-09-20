@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Dropdown</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 30px;
+        }
+
+        select {
+            padding: 10px;
+            width: 220px;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="../../index.html">Home</a> |
+    <a href="../index.html">JavaScript Programs</a>
+
+    <h1>Dynamic Dropdown</h1>
+
+    <select id="course">
+        <option value="">Select Course</option>
+    </select>
+
+    <p id="result"></p>
+
+    <script>
+        const courses = [
+            "B.Tech",
+            "BCA",
+            "B.Sc Computer Science",
+            "MCA",
+            "M.Tech"
+        ];
+
+        const dropdown = document.getElementById("course");
+
+        courses.forEach(function(course) {
+            const option = document.createElement("option");
+
+            option.value = course;
+            option.textContent = course;
+
+            dropdown.appendChild(option);
+        });
+
+        dropdown.addEventListener("change", function() {
+            document.getElementById("result").textContent =
+                "Selected Course: " + this.value;
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Admission Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 25px;
+        }
+
+        #message {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="../../index.html">Home</a> |
+    <a href="../index.html">JavaScript Programs</a>
+
+    <div class="container">
+
+        <h1>College Admission</h1>
+
+        <form id="admissionForm">
+
+            <label>Student Name</label>
+            <input type="text" id="name">
+
+            <label>Email</label>
+            <input type="email" id="email">
+
+            <label>Phone</label>
+            <input type="tel" id="phone">
+
+            <label>Course</label>
+            <select id="course">
+                <option value="">Select Course</option>
+                <option>B.Tech CSE</option>
+                <option>B.Tech ECE</option>
+                <option>B.Tech AI & DS</option>
+                <option>BBA</option>
+            </select>
+
+            <label>Percentage</label>
+            <input type="number" id="percentage">
+
+            <button type="submit">Apply</button>
+
+        </form>
+
+        <p id="message"></p>
+
+    </div>
+
+    <script>
+        document.getElementById("admissionForm")
+            .addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+                const name = document.getElementById("name").value;
+                const email = document.getElementById("email").value;
+                const phone = document.getElementById("phone").value;
+                const course = document.getElementById("course").value;
+                const percentage =
+                    document.getElementById("percentage").value;
+
+                if (
+                    name === "" ||
+                    email === "" ||
+                    phone === "" ||
+                    course === "" ||
+                    percentage === ""
+                ) {
+                    document.getElementById("message").textContent =
+                        "Please fill all fields.";
+                    return;
+                }
+
+                document.getElementById("message").textContent =
+                    "Admission application submitted successfully!";
+            });
+    </script>
+
+</body>
+</html>

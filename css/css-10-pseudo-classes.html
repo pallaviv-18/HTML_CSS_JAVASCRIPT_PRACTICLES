@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Experiment 10 - Pseudo Classes</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+        }
+
+        header {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        nav {
+            background: #333;
+            text-align: center;
+            padding: 12px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 900px;
+            margin: 35px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        /* :hover */
+        .hover-button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 22px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .hover-button:hover {
+            background: #0056b3;
+        }
+
+        /* :focus */
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0 20px;
+            border: 2px solid #ccc;
+            border-radius: 6px;
+        }
+
+        input:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        /* :active */
+        .active-button {
+            padding: 12px 22px;
+            border: none;
+            background: #28a745;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .active-button:active {
+            transform: scale(0.95);
+        }
+
+        /* :first-child */
+        .items p:first-child {
+            background: #e8f4fc;
+            padding: 12px;
+            border-left: 4px solid #007bff;
+        }
+
+        .info {
+            margin-top: 25px;
+            padding: 15px;
+            background: #f1f1f1;
+            border-radius: 8px;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: 90%;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>CSS Experiment 10</h1>
+        <p>Pseudo-Classes</p>
+    </header>
+
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="index.html">CSS Programs</a>
+    </nav>
+
+    <main class="container">
+
+        <h2>1. :hover</h2>
+
+        <p>
+            Move the mouse over the button to see the hover effect.
+        </p>
+
+        <button class="hover-button">
+            Hover Over Me
+        </button>
+
+
+        <h2>2. :focus</h2>
+
+        <p>
+            Click inside the input box to see the focus effect.
+        </p>
+
+        <input type="text" placeholder="Click here to focus">
+
+
+        <h2>3. :active</h2>
+
+        <p>
+            Press and hold the button to see the active effect.
+        </p>
+
+        <button class="active-button">
+            Press Me
+        </button>
+
+
+        <h2>4. :first-child</h2>
+
+        <div class="items">
+            <p>This is the first paragraph.</p>
+            <p>This is the second paragraph.</p>
+            <p>This is the third paragraph.</p>
+        </div>
+
+
+        <div class="info">
+            <strong>Pseudo-classes used:</strong>
+            <ul>
+                <li>:hover</li>
+                <li>:focus</li>
+                <li>:active</li>
+                <li>:first-child</li>
+            </ul>
+        </div>
+
+        <br>
+
+        <a href="index.html">← Back to CSS Programs</a>
+
+    </main>
+
+    <footer>
+        <p>CSS Practical Programs</p>
+    </footer>
+
+</body>
+</html>

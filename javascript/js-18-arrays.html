@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS 18 - Arrays</title>
+<style>
+body{font-family:Arial;text-align:center;padding:40px;background:#f4f7fb}
+.box{background:white;padding:30px;max-width:550px;margin:auto;border-radius:15px}
+button{padding:12px;background:#2563eb;color:white;border:0;border-radius:7px}
+</style>
+</head>
+<body>
+<div class="box">
+<h1>Array Methods</h1>
+<button onclick="showArray()">Run</button>
+<p id="result"></p>
+</div>
+
+<script>
+function showArray(){
+    let fruits=["Apple","Banana","Mango"];
+    fruits.push("Orange");
+    document.getElementById("result").innerHTML=
+        "Array: "+fruits.join(", ")+"<br>"+
+        "Length: "+fruits.length+"<br>"+
+        "First: "+fruits[0];
+}
+</script>
+<br>
+<a href="../index.html">Home</a> | <a href="index.html">JavaScript Programs</a>
+</body>
+</html>

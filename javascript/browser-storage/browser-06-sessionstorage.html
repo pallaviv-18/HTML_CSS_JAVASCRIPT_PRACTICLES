@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Storage</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 30px;
+        }
+
+        input {
+            padding: 10px;
+            width: 250px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="../../index.html">Home</a> |
+    <a href="../index.html">JavaScript Programs</a>
+
+    <h1>Session Storage</h1>
+
+    <input type="text" id="course" placeholder="Enter your course">
+
+    <br>
+
+    <button onclick="saveCourse()">Save</button>
+    <button onclick="getCourse()">Get Saved Course</button>
+    <button onclick="clearCourse()">Clear</button>
+
+    <p id="result"></p>
+
+    <script>
+        function saveCourse() {
+            const course = document.getElementById("course").value;
+
+            sessionStorage.setItem("course", course);
+
+            document.getElementById("result").textContent =
+                "Course saved for this session.";
+        }
+
+        function getCourse() {
+            const course = sessionStorage.getItem("course");
+
+            document.getElementById("result").textContent =
+                course ? "Saved Course: " + course : "No course found.";
+        }
+
+        function clearCourse() {
+            sessionStorage.removeItem("course");
+
+            document.getElementById("result").textContent =
+                "Course removed.";
+        }
+    </script>
+
+</body>
+</html>

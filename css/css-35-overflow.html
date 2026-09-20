@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Overflow</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .box {
+            background: white;
+            height: 180px;
+            padding: 20px;
+            border: 2px solid #2563eb;
+            border-radius: 8px;
+        }
+
+        .visible {
+            overflow: visible;
+        }
+
+        .hidden {
+            overflow: hidden;
+        }
+
+        .scroll {
+            overflow: scroll;
+        }
+
+        .auto {
+            overflow: auto;
+        }
+
+        @media (max-width: 650px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>CSS Overflow</h1>
+
+<div class="container">
+
+    <div class="box visible">
+        <h2>Visible</h2>
+        <p>
+            Overflow content remains visible outside the box.
+            This demonstrates the default overflow behavior.
+        </p>
+    </div>
+
+    <div class="box hidden">
+        <h2>Hidden</h2>
+        <p>
+            Overflowing content is clipped and hidden when it
+            exceeds the dimensions of the container.
+        </p>
+    </div>
+
+    <div class="box scroll">
+        <h2>Scroll</h2>
+        <p>
+            This box always provides scrollbars when content
+            exceeds its available width or height.
+            More text is added to demonstrate scrolling.
+        </p>
+    </div>
+
+    <div class="box auto">
+        <h2>Auto</h2>
+        <p>
+            Scrollbars are automatically added when necessary.
+            This is useful for containers with changing content.
+        </p>
+    </div>
+
+</div>
+
+</body>
+</html>

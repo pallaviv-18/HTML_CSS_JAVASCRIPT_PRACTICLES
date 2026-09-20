@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 30px;
+        }
+
+        input {
+            padding: 10px;
+            width: 250px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 8px;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="../../index.html">Home</a> |
+    <a href="../index.html">JavaScript Programs</a>
+
+    <h1>Local Storage</h1>
+
+    <input type="text" id="name" placeholder="Enter your name">
+
+    <br>
+
+    <button onclick="saveName()">Save</button>
+    <button onclick="getName()">Get Saved Name</button>
+    <button onclick="clearName()">Clear</button>
+
+    <p id="result"></p>
+
+    <script>
+        function saveName() {
+            const name = document.getElementById("name").value;
+
+            localStorage.setItem("studentName", name);
+
+            document.getElementById("result").textContent =
+                "Name saved successfully!";
+        }
+
+        function getName() {
+            const name = localStorage.getItem("studentName");
+
+            document.getElementById("result").textContent =
+                name ? "Saved Name: " + name : "No name found.";
+        }
+
+        function clearName() {
+            localStorage.removeItem("studentName");
+
+            document.getElementById("result").textContent =
+                "Saved name cleared.";
+        }
+    </script>
+
+</body>
+</html>

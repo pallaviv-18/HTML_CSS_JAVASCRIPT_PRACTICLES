@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Experiment 2 - Selectors</title>
+
+    <style>
+
+        /* Universal Selector */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* Element Selector */
+        h2 {
+            color: #b31217;
+        }
+
+        /* Class Selector */
+        .highlight {
+            background-color: #fff0f0;
+            color: #b31217;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        /* ID Selector */
+        #special {
+            color: #1d4f91;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* Grouping Selector */
+        h3,
+        p {
+            margin-bottom: 10px;
+        }
+
+        /* Attribute Selector */
+        input[type="text"] {
+            border: 2px solid #b31217;
+            padding: 10px;
+            border-radius: 6px;
+        }
+
+        /* Descendant Selector */
+        .box p {
+            color: #555;
+        }
+
+        header {
+            background: linear-gradient(135deg, #b31217, #e52d27);
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            margin-bottom: 8px;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            margin-bottom: 25px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+
+        .example {
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #fafafa;
+            border-left: 5px solid #b31217;
+        }
+
+        .navigation {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .navigation a {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #333;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 8px;
+            margin: 5px;
+        }
+
+        .navigation a:hover {
+            background-color: #b31217;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 20px;
+                padding: 20px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <h1>CSS Selectors</h1>
+
+        <p>
+            Experiment 2 - Different Types of CSS Selectors
+        </p>
+
+    </header>
+
+
+    <div class="container">
+
+        <div class="section">
+
+            <h2>1. Element Selector</h2>
+
+            <p>
+                This heading is styled using the element selector
+                <strong>h2</strong>.
+            </p>
+
+        </div>
+
+
+        <div class="section">
+
+            <h2>2. Class Selector</h2>
+
+            <p class="highlight">
+                This paragraph uses the class selector
+                <strong>.highlight</strong>.
+            </p>
+
+        </div>
+
+
+        <div class="section">
+
+            <h2>3. ID Selector</h2>
+
+            <p id="special">
+                This paragraph uses the ID selector
+                <strong>#special</strong>.
+            </p>
+
+        </div>
+
+
+        <div class="section">
+
+            <h2>4. Universal Selector</h2>
+
+            <div class="example">
+
+                <p>
+                    The universal selector <strong>*</strong>
+                    applies styles to all elements.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="section">
+
+            <h2>5. Grouping Selector</h2>
+
+            <div class="example">
+
+                <h3>Heading and Paragraph</h3>
+
+                <p>
+                    The h3 and p elements can be styled together
+                    using a grouping selector.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="section">
+
+            <h2>6. Attribute Selector</h2>
+
+            <div class="example">
+
+                <label for="name">
+                    Name:
+                </label>
+
+                <br><br>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name"
+                >
+
+            </div>
+
+        </div>
+
+
+        <div class="section">
+
+            <h2>7. Descendant Selector</h2>
+
+            <div class="box">
+
+                <p>
+                    This paragraph is inside the
+                    <strong>.box</strong> element and is styled
+                    using a descendant selector.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="section">
+
+            <h2>Selectors Demonstrated</h2>
+
+            <ul>
+                <li>Universal Selector (*)</li>
+                <li>Element Selector</li>
+                <li>Class Selector</li>
+                <li>ID Selector</li>
+                <li>Grouping Selector</li>
+                <li>Attribute Selector</li>
+                <li>Descendant Selector</li>
+            </ul>
+
+        </div>
+
+
+        <div class="navigation">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="index.html">
+                Back to Programs
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+
+        <p>
+            CSS Practical Lab | Experiment 2
+        </p>
+
+    </footer>
+
+</body>
+</html>

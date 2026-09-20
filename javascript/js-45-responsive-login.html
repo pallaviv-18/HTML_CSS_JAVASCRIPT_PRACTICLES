@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS 45 - Login Validation</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+body{font-family:Arial;background:#f4f7fb;padding:40px;text-align:center}
+.box{background:white;padding:30px;max-width:400px;margin:auto;border-radius:15px}
+input{width:90%;padding:12px;margin:8px}
+button{padding:12px 25px;background:#2563eb;color:white;border:0;border-radius:7px}
+</style>
+</head>
+<body>
+<div class="box">
+<h1>Login</h1>
+<input id="email" type="email" placeholder="Email">
+<input id="password" type="password" placeholder="Password">
+<button onclick="login()">Login</button>
+<p id="result"></p>
+</div>
+
+<script>
+function login(){
+    let email=document.getElementById("email").value;
+    let password=document.getElementById("password").value;
+
+    document.getElementById("result").textContent=
+        email && password ? "Login successful!" : "Enter all details.";
+}
+</script>
+
+<br>
+<a href="../index.html">Home</a> | <a href="index.html">JavaScript Programs</a>
+</body>
+</html>

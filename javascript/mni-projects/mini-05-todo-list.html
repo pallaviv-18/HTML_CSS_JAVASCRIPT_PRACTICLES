@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-Do List</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        input {
+            padding: 10px;
+            width: 250px;
+        }
+
+        button {
+            padding: 10px 15px;
+        }
+
+        li {
+            margin: 10px;
+            list-style: none;
+        }
+
+        li button {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>To-Do List</h2>
+
+<input type="text" id="task" placeholder="Enter a task">
+<button onclick="addTask()">Add</button>
+
+<ul id="taskList"></ul>
+
+<script>
+    function addTask() {
+        const task = document.getElementById("task").value;
+
+        if (task.trim() === "") {
+            alert("Please enter a task");
+            return;
+        }
+
+        const li = document.createElement("li");
+
+        li.innerHTML = task +
+            ' <button onclick="this.parentElement.remove()">Delete</button>';
+
+        document.getElementById("taskList").appendChild(li);
+
+        document.getElementById("task").value = "";
+    }
+</script>
+
+<p>
+    <a href="../../index.html">Home</a> |
+    <a href="../index.html">JavaScript Programs</a>
+</p>
+
+</body>
+</html>

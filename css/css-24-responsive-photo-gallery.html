@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Photo Gallery</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 20px;
+            background: #222;
+            color: white;
+        }
+
+        header h1 {
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: #ccc;
+        }
+
+        .gallery {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 0 20px;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .photo {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .photo img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .photo:hover img {
+            transform: scale(1.08);
+        }
+
+        .caption {
+            padding: 12px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .navigation {
+            text-align: center;
+            margin: 30px;
+        }
+
+        .navigation a {
+            display: inline-block;
+            background: #222;
+            color: white;
+            text-decoration: none;
+            padding: 10px 18px;
+            margin: 5px;
+            border-radius: 6px;
+        }
+
+        .navigation a:hover {
+            background: #555;
+        }
+
+        /* Tablet */
+        @media (max-width: 800px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 500px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .photo img {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>My Photo Gallery</h1>
+        <p>A responsive CSS photo gallery</p>
+    </header>
+
+    <div class="gallery">
+
+        <div class="photo">
+            <img src="https://picsum.photos/id/1015/600/400" alt="Mountain">
+            <div class="caption">Mountain</div>
+        </div>
+
+        <div class="photo">
+            <img src="https://picsum.photos/id/1016/600/400" alt="Nature">
+            <div class="caption">Nature</div>
+        </div>
+
+        <div class="photo">
+            <img src="https://picsum.photos/id/1018/600/400" alt="Landscape">
+            <div class="caption">Landscape</div>
+        </div>
+
+        <div class="photo">
+            <img src="https://picsum.photos/id/1025/600/400" alt="Animal">
+            <div class="caption">Animal</div>
+        </div>
+
+        <div class="photo">
+            <img src="https://picsum.photos/id/1035/600/400" alt="Beach">
+            <div class="caption">Beach</div>
+        </div>
+
+        <div class="photo">
+            <img src="https://picsum.photos/id/1043/600/400" alt="Forest">
+            <div class="caption">Forest</div>
+        </div>
+
+    </div>
+
+    <div class="navigation">
+        <a href="../index.html">Home</a>
+        <a href="index.html">Back to CSS Programs</a>
+    </div>
+
+</body>
+</html>
