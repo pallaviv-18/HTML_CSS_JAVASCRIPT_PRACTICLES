@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express Framework Practical</title>
+</head>
+
+<body>
+    <main>
+        <h1>Express Framework Practical</h1>
+        <p>This page is served as a static file by Express.</p>
+
+        <h2>Send a message</h2>
+        <form action="/api/messages" method="post">
+            <label>
+                Name
+                <input name="name" required>
+            </label>
+            <label>
+                Message
+                <textarea name="message" required></textarea>
+            </label>
+            <button type="submit">Send message</button>
+        </form>
+
+        <p><a href="/api/status">View JSON status response</a></p>
+    </main>
+</body>
+
+</html>
